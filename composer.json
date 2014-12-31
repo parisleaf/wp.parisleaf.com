@@ -1,0 +1,34 @@
+{
+  "repositories": [
+    {
+      "type":"composer",
+      "url":"http://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wp-api/oauth1",
+        "version": "1.0",
+        "type": "wordpress-plugin",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/WP-API/OAuth1",
+          "reference": "211eaa9df2652a4a15a2da5c4eb66d5a919b0bbe"
+        }
+      }
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "~1.1",
+    "wp-api/oauth1": "1.0",
+    "wpackagist-plugin/json-rest-api": "~1.1.1",
+    "wpackagist-plugin/amazon-s3-and-cloudfront": "~0.7.2"
+  },
+  "extra": {
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  }
+}
