@@ -12,3 +12,7 @@ wp-content/uploads/
 wp-content/wp-cache-config.php
 
 .env
+
+vendor/*
+wp-content/plugins/*
+wp-content/mu-plugins/*
