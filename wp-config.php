@@ -18,6 +18,16 @@ require_once('vendor/autoload.php');
 Dotenv::load(__DIR__);
 
 // ** MySQL settings - You can get this info from your web host ** //
+/** If DATABASE_URL environment variable is set, use parts for wp config **/
+if (getenv('DATABASE_URL')) {
+	$url = parse_url(getenv('DATABASE_URL'));
+
+	putenv('DB_NAME='.trim($url['path'], '/'));
+	putenv('DB_USER='.$url['user']);
+	putenv('DB_PASSWORD='.$url['pass']);
+	putenv('DB_HOST='.$url['host']);
+}
+
 /** The name of the database for WordPress */
 define('DB_NAME', getenv('DB_NAME'));
 
