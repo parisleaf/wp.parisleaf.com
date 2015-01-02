@@ -1,4 +1,6 @@
 {
+  "name": "parisleaf/wp.parisleaf.com",
+  "description": "An admin-only WordPress installation.",
   "repositories": [
     {
       "type":"composer",
