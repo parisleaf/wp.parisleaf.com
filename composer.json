@@ -26,8 +26,12 @@
   },
   "extra": {
     "installer-paths": {
+      "wp-content/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
+        "wpackagist-plugin/json-rest-api",
+        "wp-api/oauth1"
+      ],
       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]
     }
   }
