@@ -9,20 +9,20 @@
     {
       "type": "package",
       "package": {
-        "name": "wp-api/oauth1",
+        "name": "wp-api/Basic-Auth",
         "version": "1.0",
         "type": "wordpress-plugin",
         "source": {
           "type": "git",
-          "url": "https://github.com/WP-API/OAuth1",
-          "reference": "211eaa9df2652a4a15a2da5c4eb66d5a919b0bbe"
+          "url": "https://github.com/WP-API/Basic-Auth",
+          "reference": "a187d5fb15655cb1084162beb8ab037f93eb54db"
         }
       }
     }
   ],
   "require": {
     "vlucas/phpdotenv": "~1.1",
-    "wp-api/oauth1": "1.0",
+    "wp-api/Basic-Auth": "1.0",
     "wpackagist-plugin/json-rest-api": "~1.1.1",
     "wpackagist-plugin/amazon-s3-and-cloudfront": "~0.7.2"
   },
@@ -31,7 +31,7 @@
       "wp-content/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
         "wpackagist-plugin/json-rest-api",
-        "wp-api/oauth1"
+        "wp-api/Basic-Auth"
       ],
       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]

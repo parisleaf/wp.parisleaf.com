@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "aa1c7ecf146fdc843088400eba5d1674",
+    "hash": "1d6e3d5b42b6cd2ec536eaea5e738223",
     "packages": [
         {
             "name": "composer/installers",
@@ -150,12 +150,12 @@
             "time": "2014-12-05 15:19:21"
         },
         {
-            "name": "wp-api/oauth1",
+            "name": "wp-api/Basic-Auth",
             "version": "1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/WP-API/OAuth1",
-                "reference": "211eaa9df2652a4a15a2da5c4eb66d5a919b0bbe"
+                "url": "https://github.com/WP-API/Basic-Auth",
+                "reference": "a187d5fb15655cb1084162beb8ab037f93eb54db"
             },
             "type": "wordpress-plugin"
         },
