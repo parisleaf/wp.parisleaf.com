@@ -46,6 +46,12 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
+/**
+ * Amazaon Web Services config
+ */
+define( 'AWS_ACCESS_KEY_ID', getenv('AWS_ACCESS_KEY_ID') );
+define( 'AWS_SECRET_ACCESS_KEY', getenv('AWS_SECRET_ACCESS_KEY') );
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
