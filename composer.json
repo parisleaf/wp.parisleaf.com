@@ -24,7 +24,8 @@
     "vlucas/phpdotenv": "~1.1",
     "wp-api/Basic-Auth": "1.0",
     "wpackagist-plugin/json-rest-api": "~1.1.1",
-    "wpackagist-plugin/amazon-s3-and-cloudfront": "~0.7.2"
+    "wpackagist-plugin/amazon-s3-and-cloudfront": "~0.7.2",
+    "wpackagist-plugin/amazon-web-services": "~0.2"
   },
   "extra": {
     "installer-paths": {
