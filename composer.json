@@ -18,11 +18,25 @@
           "reference": "a187d5fb15655cb1084162beb8ab037f93eb54db"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "nekojira/wp-api-menus",
+        "version": "1.1.0",
+        "type": "wordpress-plugin",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/nekojira/wp-api-menus",
+          "reference": "96830d8ca2fa5d7fbf7f46db667811efaa0ee0a0"
+        }
+      }
     }
   ],
   "require": {
     "vlucas/phpdotenv": "~1.1",
     "wp-api/Basic-Auth": "1.0",
+    "nekojira/wp-api-menus": "1.1.0",
     "wpackagist-plugin/json-rest-api": "~1.1.1",
     "wpackagist-plugin/amazon-s3-and-cloudfront": "~0.7.2",
     "wpackagist-plugin/amazon-web-services": "~0.2"
@@ -32,7 +46,8 @@
       "wp-content/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
         "wpackagist-plugin/json-rest-api",
-        "wp-api/Basic-Auth"
+        "wp-api/Basic-Auth",
+        "nekojira/wp-api-menus"
       ],
       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]

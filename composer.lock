@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ed7e06c0c02606bca6c0375c5c6356d2",
+    "hash": "eac00faad63d49b924c89aa5a7ad8cda",
     "packages": [
         {
             "name": "composer/installers",
@@ -99,6 +99,16 @@
             "time": "2014-11-29 01:29:17"
         },
         {
+            "name": "nekojira/wp-api-menus",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nekojira/wp-api-menus",
+                "reference": "96830d8ca2fa5d7fbf7f46db667811efaa0ee0a0"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v1.1.0",
             "source": {
@@ -181,15 +191,15 @@
         },
         {
             "name": "wpackagist-plugin/amazon-web-services",
-            "version": "0.2",
+            "version": "0.2.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/amazon-web-services/",
-                "reference": "tags/0.2"
+                "reference": "tags/0.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/amazon-web-services.0.2.zip",
+                "url": "http://downloads.wordpress.org/plugin/amazon-web-services.0.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
