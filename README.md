@@ -30,3 +30,7 @@ WP-API is activated automatically, but in order for it to work, switch to pretty
 ## Deploy via dokku-alt
 
 In staging and production, this app is deployed via dokku-alt and linked to a MariaDB container. Refer to dokku-alt's [documentation](https://github.com/dokku-alt/dokku-alt) for more information.
+
+### Refresh permalinks after deploy
+
+If you're experiencing problems accessing WP-API routes after a new deploy, try clearing the permalink cache.
