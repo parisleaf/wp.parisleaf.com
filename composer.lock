@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "eac00faad63d49b924c89aa5a7ad8cda",
+    "hash": "0afa5a9a5c308e350463820548e4d7f3",
     "packages": [
         {
             "name": "composer/installers",
@@ -171,15 +171,15 @@
         },
         {
             "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
-            "version": "0.7.2",
+            "version": "0.8",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/amazon-s3-and-cloudfront/",
-                "reference": "tags/0.7.2"
+                "reference": "tags/0.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.0.7.2.zip",
+                "url": "http://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.0.8.zip",
                 "reference": null,
                 "shasum": null
             },
