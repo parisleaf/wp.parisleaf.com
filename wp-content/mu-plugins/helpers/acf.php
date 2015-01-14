@@ -2,8 +2,15 @@
 
 // Home page
 
+function get_id_by_slug($wpdb, $slug) {
+  $id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$slug."'");
+  return $id;
+}
+
 if(function_exists("register_field_group"))
 {
+
+    $id = get_id_by_slug($wpdb, 'home'); 
 	register_field_group(array (
 		'id' => 'acf_home-page',
 		'title' => 'Home Page',
@@ -38,7 +45,7 @@ if(function_exists("register_field_group"))
 				array (
 					'param' => 'page',
 					'operator' => '==',
-					'value' => '8',
+					'value' => $id,
 					'order_no' => 0,
 					'group_no' => 0,
 				),
