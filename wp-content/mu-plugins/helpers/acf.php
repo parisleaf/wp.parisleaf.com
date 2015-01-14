@@ -9,8 +9,6 @@ function get_id_by_slug($wpdb, $slug) {
 
 if(function_exists("register_field_group"))
 {
-
-    $id = get_id_by_slug($wpdb, 'home'); 
 	register_field_group(array (
 		'id' => 'acf_home-page',
 		'title' => 'Home Page',
@@ -45,7 +43,7 @@ if(function_exists("register_field_group"))
 				array (
 					'param' => 'page',
 					'operator' => '==',
-					'value' => $id,
+					'value' => get_id_by_slug($wpdb, 'home'),
 					'order_no' => 0,
 					'group_no' => 0,
 				),
