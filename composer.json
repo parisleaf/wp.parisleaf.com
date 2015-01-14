@@ -31,6 +31,19 @@
           "reference": "96830d8ca2fa5d7fbf7f46db667811efaa0ee0a0"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "PanManAms/WP-JSON-API-ACF",
+        "version": "1.0",
+        "type": "wordpress-plugin",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/PanManAms/WP-JSON-API-ACF",
+          "reference": "d1b4e02a1fb639351a54274f345d1b9c5711823a"
+        }
+      }
     }
   ],
   "require": {
@@ -40,7 +53,7 @@
     "wpackagist-plugin/json-rest-api": "~1.1.1",
     "wpackagist-plugin/amazon-s3-and-cloudfront": "~0.8",
     "wpackagist-plugin/amazon-web-services": "~0.2",
-    "wp-cli/wp-cli": "~0.17"
+      "PanManAms/WP-JSON-API-ACF":"~1.0"
   },
   "extra": {
     "installer-paths": {
@@ -48,7 +61,8 @@
         "type:wordpress-muplugin",
         "wpackagist-plugin/json-rest-api",
         "wp-api/Basic-Auth",
-        "nekojira/wp-api-menus"
+        "nekojira/wp-api-menus",
+        "PanManAms/WP-JSON-API-ACF"
       ],
       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]
