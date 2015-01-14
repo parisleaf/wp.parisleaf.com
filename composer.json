@@ -53,7 +53,8 @@
     "wpackagist-plugin/json-rest-api": "~1.1.1",
     "wpackagist-plugin/amazon-s3-and-cloudfront": "~0.8",
     "wpackagist-plugin/amazon-web-services": "~0.2",
-      "PanManAms/WP-JSON-API-ACF":"~1.0"
+    "wpackagist-plugin/advanced-custom-fields": "~4.3",
+    "PanManAms/WP-JSON-API-ACF":"~1.0"
   },
   "extra": {
     "installer-paths": {
@@ -62,7 +63,8 @@
         "wpackagist-plugin/json-rest-api",
         "wp-api/Basic-Auth",
         "nekojira/wp-api-menus",
-        "PanManAms/WP-JSON-API-ACF"
+        "PanManAms/WP-JSON-API-ACF",
+        "wpackagist-plugin/advanced-custom-fields"
       ],
       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]

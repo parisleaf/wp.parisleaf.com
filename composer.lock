@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c22738dfbc479e996bfc15c26532a1f5",
+    "hash": "717b5b453d61a1f55524d668be805027",
     "packages": [
         {
             "name": "PanManAms/WP-JSON-API-ACF",
@@ -179,6 +179,26 @@
                 "reference": "a187d5fb15655cb1084162beb8ab037f93eb54db"
             },
             "type": "wordpress-plugin"
+        },
+        {
+            "name": "wpackagist-plugin/advanced-custom-fields",
+            "version": "4.3.9",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/advanced-custom-fields/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/advanced-custom-fields.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
         },
         {
             "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
