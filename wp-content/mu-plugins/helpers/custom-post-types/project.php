@@ -4,7 +4,7 @@ function cpt_project() {
   $labels = array(
     'name'               => _x( 'Projects', 'post type general name' ),
     'singular_name'      => _x( 'Project', 'post type singular name' ),
-    'add_new'            => _x( 'Add New', 'book' ),
+    'add_new'            => _x( 'Add New', 'project' ),
     'add_new_item'       => __( 'Add New Project' ),
     'edit_item'          => __( 'Edit Project' ),
     'new_item'           => __( 'New Project' ),
@@ -18,11 +18,11 @@ function cpt_project() {
   );
   $args = array(
     'labels'        => $labels,
-    'description'   => 'CPT for projects and case studies',
+    'description'   => 'Projects and case studies',
     'public'        => true,
     'menu_position' => 5,
     'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-    'has_archive'   => true,
+    'has_archive'   => false,
   );
   register_post_type( 'project', $args ); 
 }
