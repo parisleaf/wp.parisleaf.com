@@ -38,6 +38,21 @@ if(function_exists("register_field_group"))
 				'formatting' => 'html',
 				'maxlength' => '',
 			),
+      array (
+				'key' => 'field_54bd1da0b1103',
+				'label' => 'First Impression Case Study',
+				'name' => 'first_impression_project',
+				'type' => 'post_object',
+				'instructions' => 'Case study to feature on the home page.',
+				'post_type' => array (
+					0 => 'project',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'allow_null' => 0,
+				'multiple' => 0,
+			),
 		),
 		'location' => array (
 			array (
