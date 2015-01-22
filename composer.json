@@ -55,6 +55,7 @@
     "wpackagist-plugin/amazon-web-services": "~0.2",
     "wpackagist-plugin/advanced-custom-fields": "~4.3",
     "wpackagist-plugin/ewww-image-optimizer": "~2.2.2",
+    "mexitek/phpcolors": "",
     "PanManAms/WP-JSON-API-ACF":"~1.0"
   },
   "extra": {
