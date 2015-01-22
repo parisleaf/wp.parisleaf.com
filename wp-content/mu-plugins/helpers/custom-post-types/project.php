@@ -12,7 +12,7 @@ function cpt_project() {
     'view_item'          => __( 'View Project' ),
     'search_items'       => __( 'Search Projects' ),
     'not_found'          => __( 'No projects found' ),
-    'not_found_in_trash' => __( 'No projects found in the Trash' ), 
+    'not_found_in_trash' => __( 'No projects found in the Trash' ),
     'parent_item_colon'  => '',
     'menu_name'          => 'Projects'
   );
@@ -21,10 +21,11 @@ function cpt_project() {
     'description'   => 'Projects and case studies',
     'public'        => true,
     'menu_position' => 5,
+    'rewrite'       => array( 'slug' => 'work' ),
     'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
     'has_archive'   => false,
   );
-  register_post_type( 'project', $args ); 
+  register_post_type( 'project', $args );
 }
 add_action( 'init', 'cpt_project' );
 
