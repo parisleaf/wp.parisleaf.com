@@ -81,6 +81,17 @@ if(function_exists("register_field_group"))
 		'id' => 'acf_projects',
 		'title' => 'Projects',
 		'fields' => array (
+      array (
+				'key' => 'field_54c10df2ea40d',
+				'label' => 'Hero Image',
+				'name' => 'hero_image',
+				'type' => 'image',
+				'instructions' => 'Large, full-width image that displays at the top of individual project pages. Make sure the white Parisleaf logo and menu icon remain visible when placed on top.',
+				'required' => 1,
+				'save_format' => 'object',
+				'preview_size' => 'large',
+				'library' => 'all',
+			),
 			array (
 				'key' => 'field_54bd19358a2d9',
 				'label' => 'Tagline',
