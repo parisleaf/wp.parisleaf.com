@@ -105,6 +105,13 @@ if(function_exists("register_field_group"))
 				'formatting' => 'html',
 				'maxlength' => '',
 			),
+      array (
+				'key' => 'field_54c176040fcf7',
+				'label' => 'Primary Color',
+				'name' => 'primary_color',
+				'type' => 'color_picker',
+				'default_value' => '',
+			),
 		),
 		'location' => array (
 			array (
