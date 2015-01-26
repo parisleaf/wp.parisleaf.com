@@ -53,6 +53,16 @@ if(function_exists("register_field_group"))
 				'allow_null' => 0,
 				'multiple' => 0,
 			),
+			array (
+				'key' => 'field_54c66bec7e55b',
+				'label' => 'Parisleaf Description',
+				'name' => 'parisleaf_description',
+				'type' => 'wysiwyg',
+				'instructions' => 'The description that comes after the slider on the home page.',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
 		),
 		'location' => array (
 			array (
