@@ -38,20 +38,33 @@ if(function_exists("register_field_group"))
 				'formatting' => 'html',
 				'maxlength' => '',
 			),
-      array (
-				'key' => 'field_54bd1da0b1103',
-				'label' => 'First Impression Case Study',
-				'name' => 'first_impression_project',
-				'type' => 'post_object',
-				'instructions' => 'Case study to feature on the home page.',
-				'post_type' => array (
-					0 => 'project',
+			array (
+				'key' => 'field_54c68a78d659d',
+				'label' => 'Featured Projects',
+				'name' => 'featured_projects',
+				'type' => 'repeater',
+				'instructions' => 'Please choose the projects you would like featured in the slider on the home page.',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_54c68a99d659e',
+						'label' => 'Featured Project',
+						'name' => 'featured_project',
+						'type' => 'post_object',
+						'column_width' => '',
+						'post_type' => array (
+							0 => 'project',
+						),
+						'taxonomy' => array (
+							0 => 'all',
+						),
+						'allow_null' => 0,
+						'multiple' => 0,
+					),
 				),
-				'taxonomy' => array (
-					0 => 'all',
-				),
-				'allow_null' => 0,
-				'multiple' => 0,
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Row',
 			),
 			array (
 				'key' => 'field_54c66bec7e55b',
