@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "fe7fa4003d710d2191ed18905e7b5668",
+    "hash": "18430ebd807d89a067da87cbf8ad834f",
     "packages": [
         {
             "name": "PanManAms/WP-JSON-API-ACF",
@@ -111,27 +111,25 @@
         },
         {
             "name": "mexitek/phpcolors",
-            "version": "dev-master",
+            "version": "v0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mexitek/phpColors.git",
-                "reference": "a3b051c92c3342424af17a62ec2200d753cc1e7f"
+                "reference": "bcb9d131fc70e8b953018c6e40cb63578eb09b38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mexitek/phpColors/zipball/a3b051c92c3342424af17a62ec2200d753cc1e7f",
-                "reference": "a3b051c92c3342424af17a62ec2200d753cc1e7f",
+                "url": "https://api.github.com/repos/mexitek/phpColors/zipball/bcb9d131fc70e8b953018c6e40cb63578eb09b38",
+                "reference": "bcb9d131fc70e8b953018c6e40cb63578eb09b38",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
+            "bin": [
+                "src/color.php"
+            ],
             "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src"
-                ]
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -152,7 +150,7 @@
                 "frontend",
                 "ui"
             ],
-            "time": "2014-12-11 05:16:00"
+            "time": "2012-09-19 01:19:19"
         },
         {
             "name": "nekojira/wp-api-menus",
@@ -329,9 +327,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "mexitek/phpcolors": 20
-    },
+    "stability-flags": [],
     "platform": [],
     "platform-dev": []
 }

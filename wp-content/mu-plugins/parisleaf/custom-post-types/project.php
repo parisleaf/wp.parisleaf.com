@@ -21,7 +21,7 @@ function cpt_project() {
     'description'   => 'Projects and case studies',
     'public'        => true,
     'menu_position' => 5,
-    'rewrite'       => array( 'slug' => 'work' ),
+    'rewrite'       => array( 'with_front' => false, 'slug' => 'work' ),
     'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
     'has_archive'   => false,
   );
