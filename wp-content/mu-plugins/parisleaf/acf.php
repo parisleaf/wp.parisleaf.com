@@ -76,6 +76,33 @@ if(function_exists("register_field_group"))
 				'toolbar' => 'full',
 				'media_upload' => 'yes',
 			),
+            array (
+				'key' => 'field_54c7ba9ebd06f',
+				'label' => 'More From Blog Posts',
+				'name' => 'more_from_blog_posts',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_54c7baaebd070',
+						'label' => 'Blog Post',
+						'name' => 'blog_post',
+						'type' => 'post_object',
+						'column_width' => '',
+						'post_type' => array (
+							0 => 'post',
+						),
+						'taxonomy' => array (
+							0 => 'all',
+						),
+						'allow_null' => 0,
+						'multiple' => 0,
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Row',
+			),
 		),
 		'location' => array (
 			array (
