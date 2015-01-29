@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "44cc7dafc557dfdb574d7bfd6dfb2238",
+    "hash": "c88a748c36f60c85a1ebd781ab2a52b9",
     "packages": [
         {
             "name": "PanManAms/WP-JSON-API-ACF",

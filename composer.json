@@ -80,7 +80,8 @@
         "wp-api/Basic-Auth",
         "nekojira/wp-api-menus",
         "PanManAms/WP-JSON-API-ACF",
-        "wpackagist-plugin/advanced-custom-fields"
+        "wpackagist-plugin/advanced-custom-fields",
+        "firstflight/wp-api-acf-options"
       ],
       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]
