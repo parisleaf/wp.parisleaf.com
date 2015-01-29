@@ -44,6 +44,19 @@
           "reference": "d1b4e02a1fb639351a54274f345d1b9c5711823a"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "firstflight/wp-api-acf-options",
+        "version": "1.0",
+        "type": "wordpress-plugin",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/firstflight/wp-api-acf-options",
+          "reference": "59b41b1bcb3e930a7c71d65d7595697e36ea46ec"
+        }
+      }
     }
   ],
   "require": {
@@ -56,7 +69,8 @@
     "wpackagist-plugin/advanced-custom-fields": "~4.3",
     "wpackagist-plugin/ewww-image-optimizer": "~2.2.2",
     "mexitek/phpcolors": "*",
-    "PanManAms/WP-JSON-API-ACF":"~1.0"
+    "PanManAms/WP-JSON-API-ACF":"~1.0",
+    "firstflight/wp-api-acf-options":"~1.0"
   },
   "extra": {
     "installer-paths": {

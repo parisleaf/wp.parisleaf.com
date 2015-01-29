@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "18430ebd807d89a067da87cbf8ad834f",
+    "hash": "44cc7dafc557dfdb574d7bfd6dfb2238",
     "packages": [
         {
             "name": "PanManAms/WP-JSON-API-ACF",
@@ -108,6 +109,16 @@
                 "zikula"
             ],
             "time": "2015-01-11 03:51:11"
+        },
+        {
+            "name": "firstflight/wp-api-acf-options",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firstflight/wp-api-acf-options",
+                "reference": "59b41b1bcb3e930a7c71d65d7595697e36ea46ec"
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "mexitek/phpcolors",
@@ -328,6 +339,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
 }
