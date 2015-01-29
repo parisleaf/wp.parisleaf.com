@@ -182,6 +182,76 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+
+  /*
+   *  Options Page
+   */
+  	register_field_group(array (
+		'id' => 'acf_options-page-nav-menu',
+		'title' => 'Options Page Nav Menu',
+		'fields' => array (
+			array (
+				'key' => 'field_54ca4b160e8dc',
+				'label' => 'Nav Featured Blog Post',
+				'name' => 'nav_featured_blog_post',
+				'type' => 'post_object',
+				'post_type' => array (
+					0 => 'post',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'allow_null' => 0,
+				'multiple' => 0,
+			),
+			array (
+				'key' => 'field_54ca4b2a0e8dd',
+				'label' => 'Nav Related Blog Post 1',
+				'name' => 'nav_related_blog_post_1',
+				'type' => 'post_object',
+				'post_type' => array (
+					0 => 'post',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'allow_null' => 0,
+				'multiple' => 0,
+			),
+			array (
+				'key' => 'field_54ca4b570e8de',
+				'label' => 'Nav Related Blog Post 2',
+				'name' => 'nav_related_blog_post_2',
+				'type' => 'post_object',
+				'post_type' => array (
+					0 => 'post',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'allow_null' => 0,
+				'multiple' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }
 
 
