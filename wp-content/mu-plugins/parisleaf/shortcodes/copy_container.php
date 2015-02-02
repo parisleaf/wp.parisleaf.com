@@ -1,4 +1,8 @@
 <?php
+// Shortcode copy_container
+// pass img through for img half width image like [shortcode img="/path/to/img"]
+
+
 use Mexitek\PHPColors\Color;
 function pl_copy_container( $atts, $content = null ) {
 	$a = shortcode_atts( array(
