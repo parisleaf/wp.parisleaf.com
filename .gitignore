@@ -16,3 +16,5 @@ wp-content/wp-cache-config.php
 vendor/*
 wp-content/plugins/*
 wp-content/mu-plugins/*
+
+!wp-content/mu-plugins/.gitignore
