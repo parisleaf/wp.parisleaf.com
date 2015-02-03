@@ -4,8 +4,8 @@
 - color_block
 - copy_container
 - image_gallery
-
-
+- slider
+- video
 
 ### blockquote
 
@@ -35,3 +35,14 @@ Shortcode: [image_gallery]
 Example: [image_gallery]http://parisleaf.com/image1.jpg,http://parisleaf.com/image2.jpg,http://parisleaf.com/image3.jpg[/image_gallery]
 
 
+### slider
+
+Description: Creates an image slider. See [image_gallery] for how to retrieve URLs from the Media Gallery
+Shortcode: [slider]
+Example: [slider]http://parisleaf.com/image1.jpg,http://parisleaf.com/image2.jpg,http://parisleaf.com/image3.jpg[/slider]
+
+### video
+
+Description: Creates a full width video with source and description.  Must include `src`.
+Shortcode: [video]
+Example: [video src="/path/to/video.ogv"]Some content goes here in case video does not show[/video]
