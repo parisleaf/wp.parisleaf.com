@@ -4,7 +4,7 @@
 - color_block
 - copy_container
 - image_gallery
-
+- slider
 
 
 ### blockquote
@@ -35,3 +35,8 @@ Shortcode: [image_gallery]
 Example: [image_gallery]http://parisleaf.com/image1.jpg,http://parisleaf.com/image2.jpg,http://parisleaf.com/image3.jpg[/image_gallery]
 
 
+### slider
+
+Description: Creates an image slider. See [image_gallery] for how to retrieve URLs from the Media Gallery
+Short: [slider]
+Example: [slider]http://parisleaf.com/image1.jpg,http://parisleaf.com/image2.jpg,http://parisleaf.com/image3.jpg[/slider]
