@@ -33,7 +33,7 @@ function pl_copy_container( $atts, $content = null ) {
 ?>
         <div class="copy_container">
           <div class="copy_container-content">
-            <?php echo $content; ?>
+            <?php echo do_shortcode($content); ?>
           </div>
           <div class='copy_container-img'>
             <img src="<?php echo $atts['img'] ?>">
@@ -44,7 +44,7 @@ function pl_copy_container( $atts, $content = null ) {
      } else { //there is not an image, so site container 
 ?>
 	  <div class="SiteContainer">
-            <?php echo $content; ?>
+        <?php echo do_shortcode($content); ?>
  	  </div>
 <?php
       } 
