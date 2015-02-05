@@ -15,8 +15,10 @@ function pl_copy_container( $atts, $content = null ) {
 	}
 	$style = [];
 	$classes = ['CopyContainer'];
-	if (in_array('primary', $a)) $classes[] = 'CopyContainer--primary';
-	if (in_array('secondary', $a)) $classes[] = 'CopyContainer--secondary';
+    if(is_array($atts)) {
+	  if (in_array('primary', $atts)) $classes[] = 'CopyContainer--primary';
+	  if (in_array('secondary', $atts)) $classes[] = 'CopyContainer--secondary';
+    }
 	if ($a['background_color']) {
 		$style[] = 'background-color: '.$a['background_color'].';';
 	}
@@ -40,7 +42,13 @@ function pl_copy_container( $atts, $content = null ) {
           </div>
         </div>
 <?php
-       } 
+       } else {
+?>
+         <div class="SiteContainer">
+           <?php echo do_shortcode($content); ?>
+         </div>
+<?php
+       }
      } else { //there is not an image, so site container 
 ?>
 	  <div class="SiteContainer">
