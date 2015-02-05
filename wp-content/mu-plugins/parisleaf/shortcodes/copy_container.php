@@ -14,10 +14,10 @@ function pl_copy_container( $atts, $content = null ) {
 		$a['text_color'] = $background_color->isDark() ? '#e2eaf2' : '#343844';
 	}
 	$style = [];
-	$classes = ['CopyContainer'];
+	$classes = ['HTMLContentArea'];
     if(is_array($atts)) {
-	  if (in_array('primary', $atts)) $classes[] = 'CopyContainer--primary';
-	  if (in_array('secondary', $atts)) $classes[] = 'CopyContainer--secondary';
+	  if (in_array('primary', $atts)) $classes[] = 'HTMLContentArea--primary';
+	  if (in_array('secondary', $atts)) $classes[] = 'HTMLContentArea--secondary';
     }
 	if ($a['background_color']) {
 		$style[] = 'background-color: '.$a['background_color'].';';
