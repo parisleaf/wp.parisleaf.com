@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c88a748c36f60c85a1ebd781ab2a52b9",
+    "hash": "30ba0736d93363b560f510544d102267",
     "packages": [
         {
             "name": "PanManAms/WP-JSON-API-ACF",
@@ -117,6 +117,16 @@
                 "type": "git",
                 "url": "https://github.com/firstflight/wp-api-acf-options",
                 "reference": "59b41b1bcb3e930a7c71d65d7595697e36ea46ec"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "jmfurlott/wp-api-yoast",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmfurlott/wp-api-yoast",
+                "reference": "58c486241ce0081331569821786f404341e30be7"
             },
             "type": "wordpress-plugin"
         },
@@ -236,7 +246,7 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "4.3.9",
+            "version": "4.4.0",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/advanced-custom-fields/",
@@ -256,15 +266,15 @@
         },
         {
             "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
-            "version": "0.8.1",
+            "version": "0.8.2",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/amazon-s3-and-cloudfront/",
-                "reference": "tags/0.8.1"
+                "reference": "tags/0.8.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.0.8.1.zip",
+                "url": "http://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.0.8.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -333,6 +343,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/json-rest-api/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "1.7.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/1.7.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wordpress-seo.1.7.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         }
     ],
     "packages-dev": [],

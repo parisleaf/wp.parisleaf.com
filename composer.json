@@ -48,6 +48,19 @@
     {
       "type": "package",
       "package": {
+        "name": "jmfurlott/wp-api-yoast",
+        "version": "1.0",
+        "type": "wordpress-plugin",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jmfurlott/wp-api-yoast",
+          "reference": "58c486241ce0081331569821786f404341e30be7"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
         "name": "firstflight/wp-api-acf-options",
         "version": "1.0",
         "type": "wordpress-plugin",
@@ -68,8 +81,10 @@
     "wpackagist-plugin/amazon-web-services": "~0.2",
     "wpackagist-plugin/advanced-custom-fields": "~4.3",
     "wpackagist-plugin/ewww-image-optimizer": "~2.2.2",
+    "wpackagist-plugin/wordpress-seo": "~1.7.1",
     "mexitek/phpcolors": "*",
     "PanManAms/WP-JSON-API-ACF":"~1.0",
+    "jmfurlott/wp-api-yoast": "~1.0",
     "firstflight/wp-api-acf-options":"~1.0"
   },
   "extra": {
@@ -80,6 +95,7 @@
         "wp-api/Basic-Auth",
         "nekojira/wp-api-menus",
         "PanManAms/WP-JSON-API-ACF",
+        "jmfurlott/wp-api-yoast",
         "wpackagist-plugin/advanced-custom-fields",
         "firstflight/wp-api-acf-options"
       ],
