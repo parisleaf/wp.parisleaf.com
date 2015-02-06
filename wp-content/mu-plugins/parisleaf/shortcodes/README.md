@@ -27,7 +27,7 @@ Classes:
 To use a button of a specific class, see the following example and substitute the proper class.
 
 ```
-<a href="/path/to/home" class="Button--primaryLight">Button text goes here</a>
+<a href="/path/to/home" class="Button Button--primaryLight">Button text goes here</a>
 ```
 
 
