@@ -39,6 +39,12 @@ Headers are used just like normal HTML elements but insure that it is within a `
 <h1>Header text would go here</h1>
 ```
 
+For blog titles, use the follow classes:
+
+```
+<p class="Header Header--blogTitle">Blog Title</p>
+```
+
 ### full width image
 
 ```
