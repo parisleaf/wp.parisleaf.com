@@ -86,6 +86,12 @@ Example:
 [copy_container]<p>Lorem ipsum</p><p>Isum dolorem</p>[/copy_container]
 ```
 
+Example for a two column container (text on left and image on the right):
+
+```
+[copy_container img="/path/to/rightsideimage"]<p>Text that goes on the left</p>[/copy_container]
+```
+
 To use: Enter any HTML you want inbetween tags.
 
 ### image_gallery
