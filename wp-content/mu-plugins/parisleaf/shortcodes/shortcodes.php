@@ -6,5 +6,6 @@ require_once('color_block.php');
 require_once('blockquote.php');
 require_once('slider.php');
 require_once('video.php');
+require_once('more_from_blog.php');
 
 ?>
