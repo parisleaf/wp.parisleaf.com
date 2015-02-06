@@ -1,4 +1,51 @@
-# Shortcodes
+# Web content
+
+- HTML 
+- Shortcodes
+
+## HTML
+
+- links and buttons
+- headers
+- full width image
+
+Note: All HTML elements and elements must be contained in a `[copy_container]` shortcode.
+
+### links and buttons
+
+We made links and buttons made to be similar and can usually be thought of as the same element
+
+Classes:
+
+- `primaryLight`
+- `primaryDark`
+- `secondaryLight`
+- `secondaryDark`
+- `primaryMenuLink`
+- `secondaryMenuLink`
+
+To use a button of a specific class, see the following example and substitute the proper class.
+
+```
+<a href="/path/to/home" class="Button--primaryLight">Button text goes here</a>
+```
+
+
+### headers
+
+Headers are used just like normal HTML elements but insure that it is within a `[copy_container]`.
+
+```
+<h1>Header text would go here</h1>
+```
+
+### full width image
+
+```
+<img src="/path/to/img" width="100%"></img>
+```
+
+## Shortcodes
 
 - blockquote
 - color_block
@@ -62,3 +109,4 @@ Description: Creates a full width video with source and description.  Must inclu
 Shortcode: [video]
 
 Example: [video src="/path/to/video.ogv"]Some content goes here in case video does not show[/video]
+
