@@ -1,4 +1,4 @@
-<?
+<?php
 
 function pl_more_from_blog($atts, $content = null) {
 
