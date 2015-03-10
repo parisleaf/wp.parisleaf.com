@@ -14,3 +14,11 @@ function pl_set_permalinks() {
     $wp_rewrite->set_permalink_structure( '/blog/%postname%' );// you can change /%postname%/ to any structure
 }
 add_action( 'init', 'pl_set_permalinks' );
+
+/**
+ * Responsive video embeds
+ */
+function pl_format_responsive_embeds($html, $url, $attr) {
+  return '<div class="ResponsiveEmbed">'.$html.'</div>';
+}
+add_filter('embed_oembed_html', 'pl_format_responsive_embeds', 10, 3);
