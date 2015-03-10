@@ -14,10 +14,10 @@ function pl_copy_container( $atts, $content = null ) {
 		$a['text_color'] = $background_color->isDark() ? '#e2eaf2' : '#343844';
 	}
 	$style = [];
-	$classes = ['HTMLContentArea'];
+	$classes = ['CopyContainer'];
     if(is_array($atts)) {
-	  if (in_array('primary', $atts)) $classes[] = 'HTMLContentArea--primary';
-	  if (in_array('secondary', $atts)) $classes[] = 'HTMLContentArea--secondary';
+	  if (in_array('primary', $atts)) $classes[] = 'CopyContainer--primary';
+	  if (in_array('secondary', $atts)) $classes[] = 'CopyContainer--secondary';
     }
 	if ($a['background_color']) {
 		$style[] = 'background-color: '.$a['background_color'].';';
@@ -29,35 +29,22 @@ function pl_copy_container( $atts, $content = null ) {
 	ob_start();
 ?>
 <div class="<?php echo implode($classes, ' '); ?>" <?php echo count($style) ? 'style="'.implode($style).'"' : ''?>>
-<?php
-    if((is_array($atts))) {
-      if((array_key_exists('img', $atts))) { //no image
-?>
-        <div class="copy_container">
-          <div class="copy_container-content">
-            <?php echo do_shortcode($content); ?>
-          </div>
-          <div class='copy_container-img'>
-            <img src="<?php echo $atts['img'] ?>">
-          </div>
-        </div>
-<?php
-       } else {
-?>
-         <div class="SiteContainer">
-           <?php echo do_shortcode($content); ?>
-         </div>
-<?php
-       }
-     } else { //there is not an image, so site container 
-?>
-	  <div class="SiteContainer">
-        <?php echo do_shortcode($content); ?>
- 	  </div>
-<?php
-      } 
-    
-?>
+	<?php if(is_array($atts) && array_key_exists('img', $atts)): ?>
+	  <div class="CopyContainer-imageSplit">
+	    <div class="CopyContainer-imageSplit-text">
+				<div class="CopyContainer-imageSplit-text-inner">
+	        <?php echo do_shortcode($content); ?>
+				</div>
+	    </div>
+	    <div class='CopyContainer-imageSplit-image'>
+	      <img src="<?php echo $atts['img'] ?>">
+	    </div>
+	  </div>
+	<?php else: //there is not an image, so site container ?>
+	  <div class="CopyContainer-inner">
+	    <?php echo do_shortcode($content); ?>
+	  </div>
+	<?php endif; ?>
 </div>
 <?php
 	return ob_get_clean();
