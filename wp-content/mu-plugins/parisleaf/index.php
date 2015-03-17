@@ -16,6 +16,17 @@ function pl_set_permalinks() {
 add_action( 'init', 'pl_set_permalinks' );
 
 /**
+ * Remove inline dimensions from images
+ */
+add_filter( 'get_image_tag', 'remove_width_and_height_attribute', 10 );
+add_filter( 'post_thumbnail_html', 'remove_width_and_height_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_and_height_attribute', 10 );
+
+function remove_width_and_height_attribute( $html ) {
+  return preg_replace( '/(height|width)="\d*"\s/', "", $html );
+}
+
+/**
  * Responsive video embeds
  */
 function pl_format_responsive_embeds($html, $url, $attr) {
