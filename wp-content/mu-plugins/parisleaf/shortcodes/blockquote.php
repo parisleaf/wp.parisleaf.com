@@ -9,12 +9,12 @@ function pl_blockquote($atts, $content = null) {
 
     // Begin shortcode output
     ob_start();
-    
+
     // Begin actual code to be outputted
-?>    
+?>
 
 <blockquote class='Blockquote'>
-    <div class='Blockquote-content'> <?php echo $content; ?> </div>
+    <div class='Blockquote-content'><svg name="quote" class="Blockquote-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#quote"></use></svg><?php echo $content; ?> </div>
 <?php
     if(array_key_exists('speaker', $atts)) {
 ?>
@@ -23,7 +23,7 @@ function pl_blockquote($atts, $content = null) {
 </blockquote>
 
 <?php
-    
+
     // Return code itself to shortcode
     return ob_get_clean();
 }
