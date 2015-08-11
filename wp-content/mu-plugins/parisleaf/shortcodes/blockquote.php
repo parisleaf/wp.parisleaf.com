@@ -7,10 +7,10 @@
 
 function pl_blockquote($atts, $content = null) {
 
-    // Begin shortcode output
-    ob_start();
+  // Begin shortcode output
+  ob_start();
 
-    // Begin actual code to be outputted
+  // Begin actual code to be outputted
 ?>
 
 <blockquote class='Blockquote'>
@@ -24,8 +24,8 @@ function pl_blockquote($atts, $content = null) {
 
 <?php
 
-    // Return code itself to shortcode
-    return ob_get_clean();
+  // Return code itself to shortcode
+  return ob_get_clean();
 }
 
 add_shortcode('blockquote', 'pl_blockquote');
