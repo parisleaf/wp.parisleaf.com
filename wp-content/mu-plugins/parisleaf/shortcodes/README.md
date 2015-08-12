@@ -1,6 +1,6 @@
 # Web content
 
-- HTML 
+- HTML
 - Shortcodes
 
 ## HTML
@@ -53,6 +53,7 @@ For blog titles, use the follow classes:
 
 ## Shortcodes
 
+- author
 - blockquote
 - color_block
 - copy_container
@@ -60,11 +61,21 @@ For blog titles, use the follow classes:
 - slider
 - video
 
+### author
+
+Description: Adds a styled block that retrieves the post author's information
+
+Shortcode: [author]
+
+Example: `[author]`
+
+To use: Enter the shortcode tag at the end of the article content. Must be shown within a `[copy_container]` block to be correctly formatted.
+
 ### blockquote
 
 Description: Format text in large blockquote form
 
-Shortcode: [blockquote]
+Shortcode: `[blockquote]`
 
 Example: `[blockquote speaker="Joseph Furlott"]Lorem ipsum quote content goes here[/blockquote]`
 
@@ -106,7 +117,7 @@ Description: Creates a 0 padding and 0 margin image gallery.  There are two colu
 
 Shortcode: `[image_gallery]`
 
-Example: 
+Example:
 
 ```
 [image_gallery]http://parisleaf.com/image1.jpg,http://parisleaf.com/image2.jpg,http://parisleaf.com/image3.jpg[/image_gallery]
