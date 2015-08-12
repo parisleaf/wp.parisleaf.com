@@ -5,7 +5,7 @@
 // Example: [author]
 // To use: simply enter the shortcode, and the author block will be created
 
-function pl_author() {
+function pl_author($atts) {
 
   // Begin shortcode output
   ob_start();
@@ -15,7 +15,7 @@ function pl_author() {
 
 <footer class='Author'>
   <h5>About <?php the_author(); ?></h5>
-  <p><?php get_the_author_meta('description'); ?></p>
+  <p><?php the_author_meta('description'); ?></p>
 </footer>
 
 <?php
