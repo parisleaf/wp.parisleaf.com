@@ -14,9 +14,9 @@ function pl_author($atts) {
 ?>
 
 <footer class='Author'>
-  <?php echo get_avatar( get_the_author_meta( 'ID' ), 256); ?>
+  <?php echo get_avatar( get_the_author_meta( 'ID' ), 384); ?>
   <h5>About <?php the_author(); ?></h5>
-  <p><?php the_author_meta( 'description' ); ?></p>
+  <p class="Author-content"><?php the_author_meta( 'description' ); ?></p>
 </footer>
 
 <?php
