@@ -41,6 +41,6 @@ add_filter('embed_oembed_html', 'pl_format_responsive_embeds', 10, 3);
 function pl_get_avatar_url($get_avatar){
   preg_match("/src='(.*?)'/i", $get_avatar, $matches);
   $url = $matches[1];
-  preg_replace("/^http:\/\//i", "https://", $url, 1);
+  preg_replace("/http:\/\//i", "https://", $url, 1);
   return $url;
 }
