@@ -22,15 +22,14 @@ add_filter( 'login_headertitle', 'pl_set_admin_logo_url_title' );
 
 /**
  * Show except meta box for posts
- *
- * function pl_change_default_hidden( $hidden, $screen ) {
- *   if ( 'page' == $screen->id ) {
- *     $hidden = array_flip($hidden);
- *     unset($hidden['authordiv']); //show author box
- *     $hidden = array_flip($hidden);
- *     $hidden[] = 'pageparentdiv'; //hide page attributes
- *   }
- *   return $hidden;
- * }
- * add_filter( 'default_hidden_meta_boxes', 'change_default_hidden', 10, 2 );
-*/
+ */
+function pl_change_default_hidden( $hidden, $screen ) {
+  if ( $screen->id == 'post' ) {
+    $hidden = array_flip($hidden);
+    unset($hidden['authordiv']); //show author box
+    $hidden = array_flip($hidden);
+    // $hidden[] = 'pageparentdiv'; //hide page attributes
+  }
+  return $hidden;
+}
+add_filter( 'default_hidden_meta_boxes', 'pl_change_default_hidden', 10, 2 );
