@@ -24,11 +24,13 @@ add_filter( 'login_headertitle', 'pl_set_admin_logo_url_title' );
  * Show except meta box for posts
  */
 function pl_change_default_hidden( $hidden, $screen ) {
-  if ( $screen->id == 'post' ) {
+  $post_type = $screen->post_type;
+  if ( $post_type == 'post' ) {
     $hidden = array_flip($hidden);
     unset($hidden['postexcerpt']); //show excerpt box
     $hidden = array_flip($hidden);
     // $hidden[] = 'pageparentdiv'; //hide page attributes
+    return $hidden;
   }
   return $hidden;
 }
