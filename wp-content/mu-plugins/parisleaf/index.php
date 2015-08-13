@@ -38,7 +38,7 @@ add_action( 'init', 'pl_set_permalinks' );
    return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
  }
  remove_filter('get_the_excerpt', 'wp_trim_excerpt');
- add_filter('get_the_excerpt', 'pl_custom_excerpt');
+ add_filter('get_the_excerpt', 'pl_custom_excerpt', 999);
 
 /**
  * Remove inline dimensions from images
