@@ -26,7 +26,7 @@ add_filter( 'login_headertitle', 'pl_set_admin_logo_url_title' );
 function pl_change_default_hidden( $hidden, $screen ) {
   if ( $screen->id == 'post' ) {
     $hidden = array_flip($hidden);
-    unset($hidden['authordiv']); //show author box
+    unset($hidden['postexcerpt']); //show excerpt box
     $hidden = array_flip($hidden);
     // $hidden[] = 'pageparentdiv'; //hide page attributes
   }
