@@ -18,23 +18,22 @@ add_action( 'init', 'pl_set_permalinks' );
 
 /**
  * Pre-process excerpt to remove shortcodes
- *
- * function pl_custom_excerpt($excerpt = '') {
- *  $raw_excerpt = $excerpt;
- *  if ( $excerpt == '' ) {
- *    $excerpt = get_the_content('');
- *    $excerpt = strip_shortcodes( $excerpt );
- *    // $excerpt = do_shortcode( $excerpt );
- *    $excerpt = apply_filters( 'the_content', $excerpt );
- *    $excerpt_length = apply_filters( 'excerpt_length', 55 );
- *    $excerpt_more = apply_filters( 'excerpt_more', '...' );
- *    $excerpt = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
- *  }
- *  return apply_filters('wp_trim_excerpt', $excerpt, $raw_excerpt);
- * }
- * remove_filter( 'get_the_excerpt', 'wp_trim_excerpt', 10 );
- * add_filter( 'get_the_excerpt', 'pl_custom_excerpt', 10 );
-*/
+ */
+function pl_custom_excerpt($text = '') {
+  $raw_excerpt = $text;
+  if ( $text == '' ) {
+    $text = get_the_content('');
+    $text = strip_shortcodes( $text );
+    // $text = do_shortcode( $text );
+    $text = apply_filters( 'the_content', $text );
+    $text_length = apply_filters( 'excerpt_length', 55 );
+    $text_more = apply_filters( 'excerpt_more', '...' );
+    $text = wp_trim_words( $text, $text_length, $text_more );
+  }
+  return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
+}
+remove_filter( 'get_the_excerpt', 'wp_trim_excerpt', 10 );
+add_filter( 'get_the_excerpt', 'pl_custom_excerpt', 10 );
 
 /**
  * Remove inline dimensions from images
