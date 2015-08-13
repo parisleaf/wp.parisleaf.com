@@ -17,6 +17,30 @@ function pl_set_permalinks() {
 add_action( 'init', 'pl_set_permalinks' );
 
 /**
+ * Pre-process excerpt to remove shortcodes
+ */
+ function pl_custom_excerpt( $text ) {
+   // Creates an excerpt if needed; and shortens the manual excerpt as well
+   global $post;
+  $raw_excerpt = $text;
+  if ( '' == $text ) {
+    $text = get_the_content('');
+    $text = strip_shortcodes( $text );
+    $text = apply_filters('the_content', $text);
+    $text = str_replace(']]>', ']]&gt;', $text);
+  }
+
+   $text = strip_tags($text);
+   $excerpt_length = apply_filters('excerpt_length', 55);
+   $excerpt_more = apply_filters('excerpt_more', '...');
+   $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+
+   return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
+ }
+ remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+ add_filter('get_the_excerpt', 'pl_custom_excerpt');
+
+/**
  * Remove inline dimensions from images
  */
 add_filter( 'get_image_tag', 'remove_width_and_height_attribute', 10 );
@@ -39,8 +63,8 @@ add_filter('embed_oembed_html', 'pl_format_responsive_embeds', 10, 3);
  * Get the avatar image url and replace http with https
  */
 function pl_get_avatar_url($get_avatar){
-  preg_match("/src=\"(.*?)\"/i", $get_avatar, $matches);
+  preg_match("/src=\"(.*?)\"/", $get_avatar, $matches);
   $url = $matches[1];
-  $url = preg_replace("/http:\/\//i", "https://", $url, 1);
+  $url = preg_replace("/http:\/\//", "https://", $url);
   return $url;
 }
