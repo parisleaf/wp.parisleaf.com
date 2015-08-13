@@ -17,22 +17,6 @@ function pl_set_permalinks() {
 add_action( 'init', 'pl_set_permalinks' );
 
 /**
- * Pre-process excerpt to remove shortcodes
- */
-function pl_custom_excerpt( $text ) {
-  $text = strip_shortcodes( $text );
-  // $text = do_shortcode( $text );
-  $text = apply_filters( 'the_content', $text );
-  $text_length = apply_filters( 'excerpt_length', 55 );
-  $text_more = apply_filters( 'excerpt_more', '...' );
-  $text = wp_trim_words( $text, $text_length, $text_more );
-
-  return $text;
-}
-remove_filter( 'get_the_excerpt', 'wp_trim_excerpt', 10 );
-add_filter( 'get_the_excerpt', 'pl_custom_excerpt', 10 );
-
-/**
  * Remove inline dimensions from images
  */
 add_filter( 'get_image_tag', 'remove_width_and_height_attribute', 10 );
@@ -50,3 +34,13 @@ function pl_format_responsive_embeds($html, $url, $attr) {
   return '<div class="ResponsiveEmbed">'.$html.'</div>';
 }
 add_filter('embed_oembed_html', 'pl_format_responsive_embeds', 10, 3);
+
+/**
+ * Get the avatar image url and replace http with https
+ */
+function pl_get_avatar_url($get_avatar){
+  preg_match("/src='(.*?)'/i", $get_avatar, $matches);
+  $url = $matches[1];
+  preg_replace("/^http:\/\//i", "https://", $url, 1);
+  return $url;
+}
