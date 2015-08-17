@@ -17,14 +17,6 @@ function pl_set_permalinks() {
 add_action( 'init', 'pl_set_permalinks' );
 
 /**
- * Set custom excerpt length
- */
- function pl_custom_excerpt_length( $length ) {
- 	return 55;
- }
- add_filter( 'excerpt_length', 'pl_custom_excerpt_length', 999 );
- 
-/**
  * Remove inline dimensions from images
  */
 function remove_width_and_height_attribute( $html ) {
