@@ -30,6 +30,6 @@ add_filter( 'image_send_to_editor', 'remove_width_and_height_attribute', 10 );
  * Responsive video embeds
  */
 function pl_format_responsive_embeds($html, $url, $attr) {
-  return '<div class="ResponsiveEmbed">'.$html.'</div>';
+  return '<div class="ResponsiveEmbed aligncenter">'.$html.'</div>';
 }
 add_filter('embed_oembed_html', 'pl_format_responsive_embeds', 10, 3);

@@ -1,3 +1,1 @@
-<?php  header( 'Location: http://beta.parisleaf.com' ) ;  ?>
-
-// remove_this
+<?php  header( 'Location: http://parisleaf.com' ) ;  ?>
