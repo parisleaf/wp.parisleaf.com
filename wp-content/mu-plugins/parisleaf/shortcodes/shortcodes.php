@@ -9,3 +9,5 @@ require_once('image_gallery.php');
 require_once('more_from_blog.php');
 require_once('slider.php');
 require_once('video.php');
+
+?>
