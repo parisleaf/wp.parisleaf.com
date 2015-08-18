@@ -33,11 +33,3 @@ function pl_format_responsive_embeds($html, $url, $attr) {
   return '<div class="ResponsiveEmbed">'.$html.'</div>';
 }
 add_filter('embed_oembed_html', 'pl_format_responsive_embeds', 10, 3);
-
-/**
- * Set custom excerpt length
- */
- function pl_custom_excerpt_length( $length ) {
- 	return 55;
- }
- add_filter( 'excerpt_length', 'pl_custom_excerpt_length' );
