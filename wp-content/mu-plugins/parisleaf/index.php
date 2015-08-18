@@ -7,14 +7,14 @@ require_once('taxonomies/project_tag.php');
 require_once('shortcodes/shortcodes.php');
 
 /**
- * Force set permalink structure
+ * Force set permalink structure on admin page load
  */
 function pl_set_permalinks() {
   global $wp_rewrite;
   $wp_rewrite->set_permalink_structure( '/blog/%postname%' );// you can change /%postname%/ to any structure
   $wp_rewrite->flush_rules();
 }
-add_action( 'after_switch_theme', 'pl_set_permalinks', 999 );
+add_action( 'admin_init', 'pl_set_permalinks' );
 
 /**
  * Remove inline dimensions from images
