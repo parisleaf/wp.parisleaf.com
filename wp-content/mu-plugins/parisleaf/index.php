@@ -10,11 +10,11 @@ require_once('shortcodes/shortcodes.php');
  * Force set permalink structure
  */
 function pl_set_permalinks() {
-    global $wp_rewrite;
-    $wp_rewrite->flush_rules();
-    $wp_rewrite->set_permalink_structure( '/blog/%postname%' );// you can change /%postname%/ to any structure
+  global $wp_rewrite;
+  $wp_rewrite->set_permalink_structure( '/blog/%postname%' );// you can change /%postname%/ to any structure
+  $wp_rewrite->flush_rules();
 }
-add_action( 'init', 'pl_set_permalinks' );
+add_action('after_switch_theme', 'pl_set_permalinks');
 
 /**
  * Remove inline dimensions from images
