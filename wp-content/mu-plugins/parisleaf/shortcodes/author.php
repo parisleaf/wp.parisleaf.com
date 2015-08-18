@@ -13,14 +13,16 @@ function pl_author($atts) {
   // Begin actual code to be outputted
 ?>
 
-<?php
-  $avatar_args = array(
-    'scheme' => 'https'
-  );
-  echo get_avatar( get_the_author_meta( 'ID' ), 384, '', 'Image for post author.', $avatar_args);
-?>
-<h5>About <?php the_author(); ?></h5>
-<p class="Author-content"><?php the_author_meta( 'description' ); ?></p>
+  <footer class='Author'>
+    <?php
+      $avatar_args = array(
+        'scheme' => 'https'
+      );
+      echo get_avatar( get_the_author_meta( 'ID' ), 384, '', 'Image for post author.', $avatar_args);
+    ?>
+    <h5>About <?php the_author(); ?></h5>
+    <p class="Author-content"><?php the_author_meta( 'description' ); ?></p>
+  </footer>
 
 <?php
 
