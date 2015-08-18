@@ -11,7 +11,7 @@ require_once('shortcodes/shortcodes.php');
  */
 function pl_set_permalinks() {
     global $wp_rewrite;
-    // $wp_rewrite->flush_rules( false );
+    $wp_rewrite->flush_rules();
     $wp_rewrite->set_permalink_structure( '/blog/%postname%' );// you can change /%postname%/ to any structure
 }
 add_action( 'init', 'pl_set_permalinks' );
