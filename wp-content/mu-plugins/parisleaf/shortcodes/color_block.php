@@ -8,18 +8,18 @@
 function pl_color_block($atts, $content = null) {
 
     $colors = str_getcsv($content); // hex codes are now in an array
-    
+
     // Begin shortcode output
     ob_start();
-    
+
     // Begin actual code to be outputted
-    
-    echo "<div class='color_block'>";
+
+    echo "<div class='color_block aligncenter'>";
     foreach($colors as $color) {
         echo "<div class='color_block-color' style='background-color:".$color.";'></div>";
     }
     echo "</div>";
-    
+
     // Return code itself to shortcode
     return ob_get_clean();
 }
