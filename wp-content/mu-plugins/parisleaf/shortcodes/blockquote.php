@@ -14,10 +14,8 @@ function pl_blockquote($atts, $content = null) {
 ?>
 
 <blockquote class='Blockquote'>
-    <div class='Blockquote-content'><svg name="quote" class="Blockquote-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#quote"></use></svg><?php echo $content; ?> </div>
-<?php
-    if(array_key_exists('speaker', $atts)) {
-?>
+    <div class='Blockquote-content'><svg name="quote" class="Blockquote-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#quote"></use></svg><?php echo $content; ?></div>
+<?php if(array_key_exists('speaker', $atts)) { ?>
     <footer class="Blockquote-footer"><?php echo $atts['speaker'];  ?></footer>
 <?php } ?>
 </blockquote>

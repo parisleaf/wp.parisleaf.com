@@ -29,7 +29,7 @@ add_filter( 'image_send_to_editor', 'remove_width_and_height_attribute', 10 );
 /**
  * Responsive video embeds
  */
-function pl_format_responsive_embeds($html, $url, $attr) {
+function pl_format_responsive_embeds( $html ) {
   return '<div class="ResponsiveEmbed aligncenter">'.$html.'</div>';
 }
-add_filter('embed_oembed_html', 'pl_format_responsive_embeds', 10, 3);
+add_filter('embed_oembed_html', 'pl_format_responsive_embeds', 10);

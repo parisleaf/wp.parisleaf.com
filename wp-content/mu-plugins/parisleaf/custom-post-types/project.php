@@ -22,8 +22,8 @@ function cpt_project() {
     'public'        => true,
     'menu_position' => 5,
     'rewrite'       => array( 'with_front' => false, 'slug' => 'work' ),
-    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-    'has_archive'   => false,
+    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'revisions' ),
+    'has_archive'   => false
   );
   register_post_type( 'project', $args );
 }

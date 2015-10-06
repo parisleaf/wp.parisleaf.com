@@ -1,1 +1,1 @@
-<?php  header( 'Location: http://parisleaf.com' ) ;  ?>
+<?php  header( 'Location: https://parisleaf.com' ) ;  ?>
