@@ -9,8 +9,3 @@ function pl_set_admin_logo() {
   </style>';
 }
 add_action( 'login_head', 'pl_set_admin_logo' );
-
-function pl_set_admin_logo_url() {
-  return get_bloginfo( 'url' );
-}
-add_filter( 'login_headerurl', 'pl_set_admin_logo_url' );
