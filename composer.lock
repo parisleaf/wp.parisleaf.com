@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f9bff336911ef7d55a22f5894f49bf43",
+    "hash": "3fb120f8e38d58b897ce7c26d6c6e28e",
+    "content-hash": "9caf6f1afd335af17fdd2773d4e2b2c1",
     "packages": [
         {
             "name": "PanManAms/WP-JSON-API-ACF",
@@ -133,25 +134,27 @@
         },
         {
             "name": "mexitek/phpcolors",
-            "version": "v0.3",
+            "version": "v0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mexitek/phpColors.git",
-                "reference": "bcb9d131fc70e8b953018c6e40cb63578eb09b38"
+                "reference": "89bf30473a68dc8845e46e9db3e536b969e18c11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mexitek/phpColors/zipball/bcb9d131fc70e8b953018c6e40cb63578eb09b38",
-                "reference": "bcb9d131fc70e8b953018c6e40cb63578eb09b38",
+                "url": "https://api.github.com/repos/mexitek/phpColors/zipball/89bf30473a68dc8845e46e9db3e536b969e18c11",
+                "reference": "89bf30473a68dc8845e46e9db3e536b969e18c11",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "bin": [
-                "src/color.php"
-            ],
             "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ]
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -172,7 +175,7 @@
                 "frontend",
                 "ui"
             ],
-            "time": "2012-09-19 01:19:19"
+            "time": "2015-09-09 15:43:06"
         },
         {
             "name": "nekojira/wp-api-menus",
@@ -242,15 +245,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "4.4.2",
+            "version": "4.4.3",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "trunk"
+                "reference": "tags/4.4.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -262,15 +265,15 @@
         },
         {
             "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
-            "version": "0.9.3",
+            "version": "0.9.6",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/amazon-s3-and-cloudfront/",
-                "reference": "tags/0.9.3"
+                "reference": "tags/0.9.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.0.9.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.0.9.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -282,7 +285,7 @@
         },
         {
             "name": "wpackagist-plugin/amazon-web-services",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/amazon-web-services/",
@@ -322,15 +325,15 @@
         },
         {
             "name": "wpackagist-plugin/ewww-image-optimizer",
-            "version": "2.5.0",
+            "version": "2.5.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/ewww-image-optimizer/",
-                "reference": "tags/2.5.0"
+                "reference": "tags/2.5.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/ewww-image-optimizer.2.5.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/ewww-image-optimizer.2.5.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -362,15 +365,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/2.3.4"
+                "reference": "tags/2.3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.3.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.3.5.zip",
                 "reference": null,
                 "shasum": null
             },
