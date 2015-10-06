@@ -28,10 +28,11 @@ add_filter( 'login_headertitle', 'pl_set_admin_logo_url_title' );
 /**
  * Add editor styles
  */
-// function pl_add_editor_styles() {
-//   add_editor_style( 'custom-editor-style.css' );
-// }
-// add_action( 'admin_init', 'pl_add_editor_styles' );
+ function pl_add_editor_styles() {
+   // Tell the TinyMCE editor to use a custom stylesheet
+   add_editor_style(get_template_directory().'/editor-style.css');
+ }
+ add_action('after_setup_theme', 'pl_add_editor_styles');
 
 /**
  * Force set permalink structure on admin page load
