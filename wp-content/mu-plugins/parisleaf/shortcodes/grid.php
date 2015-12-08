@@ -28,7 +28,7 @@ function pl_grid($atts, $content = null) {
 
 <div class="aligncenter">
   <div class="<?= implode(' ', $classes); ?>">
-    <?php do_shortcode($content); ?>
+    <?= do_shortcode($content); ?>
   </div>
 </div>
 

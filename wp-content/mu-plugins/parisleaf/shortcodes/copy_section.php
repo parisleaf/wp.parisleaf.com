@@ -25,8 +25,8 @@ function pl_copy_section( $atts, $content = null ) {
 
 ?>
 
-<div class="<?php echo implode($classes, ' '); ?>">
-  <?php echo do_shortcode($content); ?>
+<div class="<?= implode($classes, ' '); ?>">
+  <?= do_shortcode($content); ?>
 </div>
 
 <?php
