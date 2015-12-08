@@ -20,7 +20,7 @@ function pl_cell($atts, $content = null) {
 ?>
 
 <div class="<?= implode(' ', $classes); ?>">
-  <?= $content; ?>
+  <?php do_shortcode($content); ?>
 </div>
 
 <?php
