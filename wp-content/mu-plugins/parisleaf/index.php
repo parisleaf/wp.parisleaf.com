@@ -61,3 +61,10 @@ function pl_format_responsive_embeds( $html ) {
   return '<div class="ResponsiveEmbed aligncenter">'.$html.'</div>';
 }
 add_filter('embed_oembed_html', 'pl_format_responsive_embeds', 10);
+
+/**
+ * Fix shortcode auto paragraph bs
+ */
+remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', 'wpautop', 99);
+add_filter( 'the_content', 'shortcode_unautop', 100 );
