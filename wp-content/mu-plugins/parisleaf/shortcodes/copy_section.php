@@ -32,9 +32,7 @@ function pl_copy_section( $atts, $content = null ) {
 ?>
 
 <div class="<?php echo implode($classes, ' '); ?>">
-  <div class="CopySection-inner">
-    <?php echo do_shortcode($content); ?>
-  </div>
+  <?php echo do_shortcode($content); ?>
 </div>
 
 <?php
