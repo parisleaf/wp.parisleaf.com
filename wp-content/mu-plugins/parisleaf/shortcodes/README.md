@@ -56,8 +56,8 @@ For blog titles, use the follow classes:
 - author
 - blockquote
 - color_block
-- copy_container
 - image_gallery
+- section
 - slider
 - video
 
@@ -91,26 +91,6 @@ Example: `[color_block]#f00,#0f0,#00f[/color_block]`
 
 To use: Enter hexcodes as CSV within the shortcode opening/closing tags.
 
-### copy_container
-
-Description: Creates a site-container div for any content or copy.  Also, handles the half width images and text.  Pass a `img` parameter to have an image on the right (in this case, they are outside the site container).
-
-Shortcode: `[copy_container]`
-
-Example:
-
-```
-[copy_container]<p>Lorem ipsum</p><p>Isum dolorem</p>[/copy_container]
-```
-
-Example for a two column container (text on left and image on the right):
-
-```
-[copy_container img="/path/to/rightsideimage"]<p>Text that goes on the left</p>[/copy_container]
-```
-
-To use: Enter any HTML you want inbetween tags.
-
 ### image_gallery
 
 Description: Creates a 0 padding and 0 margin image gallery.  There are two columns on larger screens, and goes to one column on mobile.  Pass image URLs as comma separated values.  To get the URLs for Wordpress uploaded media, go to the Media Gallery and click on the specified image (the URL should be on the info on the right).
@@ -122,6 +102,32 @@ Example:
 ```
 [image_gallery]http://parisleaf.com/image1.jpg,http://parisleaf.com/image2.jpg,http://parisleaf.com/image3.jpg[/image_gallery]
 ```
+
+### section
+
+Description: Creates a site-container div for any content or copy.  Also, handles the half width images and text.
+
+Shortcode: `[section]`
+
+Example:
+
+```
+[section]<p>Lorem ipsum</p><p>Isum dolorem</p>[/section]
+```
+
+Example for full width content
+
+```
+[section full]<p>Text that goes on the left</p>[/section]
+```
+
+Example for extra spaced content
+
+```
+[section spaced]<p>Text that goes on the left</p>[/section]
+```
+
+To use: Enter any HTML you want inbetween tags.
 
 ### slider
 

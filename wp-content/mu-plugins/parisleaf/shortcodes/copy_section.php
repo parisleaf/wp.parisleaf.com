@@ -1,12 +1,6 @@
 <?php
 // SHORTCODE: Copy Section
 // input: [section modifiers]content[/section]
-// output:
-// <div class="CopySection">
-//   <div class="CopySection-inner">
-//     $content
-//   </div>
-//  </div>
 
 function pl_is_flag( $flag, $atts ) {
   foreach ( $atts as $key => $value )
@@ -25,7 +19,7 @@ function pl_copy_section( $atts, $content = null ) {
 	} else {
 		$classes[] = 'CopySection--contain';
 	}
-	
+
 	if ( pl_is_flag( 'spaced', $clean_atts ) ) {
 		$classes[] = 'CopySection--spaced';
 	}

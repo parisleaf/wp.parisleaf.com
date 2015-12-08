@@ -15,7 +15,7 @@ function pl_image_gallery($atts, $content = null) {
 
     echo '<div class="image_gallery aligncenter">';
     foreach($links as $link) {
-        echo '<div class="image_gallery-image"><img src='".$link."'></div>';
+        echo '<div class="image_gallery-image"><img src="'.$link.'"></div>';
     }
     echo '</div>';
 
