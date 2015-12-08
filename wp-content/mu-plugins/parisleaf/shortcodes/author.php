@@ -20,7 +20,7 @@ function pl_author($atts) {
       );
       echo get_avatar( get_the_author_meta( 'ID' ), 384, '', 'Image for post author.', $avatar_args);
     ?>
-    <h5>About <?php the_author(); ?></h5>
+    <h4>About <?php the_author(); ?></h4>
     <p class="Author-content"><?php the_author_meta( 'description' ); ?></p>
   </footer>
 

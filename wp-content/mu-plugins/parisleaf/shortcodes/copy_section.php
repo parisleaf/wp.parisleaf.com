@@ -25,6 +25,10 @@ function pl_copy_section( $atts, $content = null ) {
 	} else {
 		$classes[] = 'CopySection--contain';
 	}
+	
+	if ( pl_is_flag( 'spaced', $clean_atts ) ) {
+		$classes[] = 'CopySection--spaced';
+	}
 
 	// Begin shortcode output
 	ob_start();
