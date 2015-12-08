@@ -1,12 +1,8 @@
 <?php
-// SHORTCODE: Copy Section
-// input: [section modifiers]content[/section]
 
-function pl_is_flag( $flag, $atts ) {
-  foreach ( $atts as $key => $value )
-    if ( $value === $flag && is_int( $key ) ) return true;
-  return false;
-}
+// SHORTCODE: Copy Section
+//
+// input: [section modifiers]content[/section]
 
 function pl_copy_section( $atts, $content = null ) {
 	// Clean atts
