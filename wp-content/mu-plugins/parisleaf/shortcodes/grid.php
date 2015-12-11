@@ -13,12 +13,26 @@ function pl_grid($atts, $content = null) {
     'Grid',
     'Grid--full',
     'Grid--lgFit',
-    'Grid--center',
   ];
 
   // Add modifiers
+  if ( pl_is_flag( 'top', $clean_atts ) ) {
+    $classes[] = 'Grid--top';
+  }
+  if ( pl_is_flag( 'center', $clean_atts ) ) {
+    $classes[] = 'Grid--center';
+  }
+  if ( pl_is_flag( 'bottom', $clean_atts ) ) {
+    $classes[] = 'Grid--bottom';
+  }
   if ( pl_is_flag( 'gutters', $clean_atts ) ) {
     $classes[] = 'Grid--gutters';
+  }
+  if ( pl_is_flag( 'space', $clean_atts ) ) {
+    $classes[] = 'Grid--space';
+  }
+  if ( pl_is_flag( 'extend', $clean_atts ) ) {
+    $classes[] = 'Grid--extend';
   }
 
   // Begin shortcode output
@@ -26,10 +40,8 @@ function pl_grid($atts, $content = null) {
 
 ?>
 
-<div class="aligncenter">
-  <div class="<?= implode(' ', $classes); ?>">
-    <?= do_shortcode($content); ?>
-  </div>
+<div class="<?= implode(' ', $classes); ?>">
+  <?= do_shortcode($content); ?>
 </div>
 
 <?php
