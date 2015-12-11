@@ -88,6 +88,7 @@ $table_prefix  = getenv('WP_TABLE_PREFIX') ?: 'wp_';
  * in their development environments.
  */
 define('WP_DEBUG', false);
+define('WP_POST_REVISIONS', 5);
 
 /* That's all, stop editing! Happy blogging. */
 
