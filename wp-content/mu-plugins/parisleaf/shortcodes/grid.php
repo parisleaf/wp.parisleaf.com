@@ -19,8 +19,8 @@ function pl_grid($atts, $content = null) {
   if ( pl_is_flag( 'top', $clean_atts ) ) {
     $classes[] = 'Grid--top';
   }
-  if ( pl_is_flag( 'center', $clean_atts ) ) {
-    $classes[] = 'Grid--center';
+  if ( pl_is_flag( 'middle', $clean_atts ) ) {
+    $classes[] = 'Grid--middle';
   }
   if ( pl_is_flag( 'bottom', $clean_atts ) ) {
     $classes[] = 'Grid--bottom';
