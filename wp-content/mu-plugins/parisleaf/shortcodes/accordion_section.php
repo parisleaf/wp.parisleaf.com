@@ -2,7 +2,7 @@
 
 // SHORTCODE: Accordion Section
 //
-// input: [section title="" description="" video-src-mp4="" video-src-ogv="" image-src="" image-width="1280" image-height="720" image-focus-x="0.5" image-focus-y="0.5"]
+// input: [accordion_section title="" description="" video-src-mp4="" video-src-ogv="" image-src="" image-width="1280" image-height="720" image-focus-x="0.5" image-focus-y="0.5"]
 
 function pl_accordion_section($atts, $content = null) {
 
@@ -44,4 +44,4 @@ function pl_accordion_section($atts, $content = null) {
   return ob_get_clean();
 }
 
-add_shortcode('section', 'pl_accordion_section');
+add_shortcode('accordion_section', 'pl_accordion_section');
