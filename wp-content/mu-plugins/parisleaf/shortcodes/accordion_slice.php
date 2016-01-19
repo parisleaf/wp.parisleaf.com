@@ -2,7 +2,7 @@
 
 // SHORTCODE: Slice
 //
-// input: [slice title="" description="" video-src="" image-src="" image-width="1280" image-height="720" image-focus-x="0.5" image-focus-y="0.5"]
+// input: [slice title="" description="" video-src-mp4="" video-src-ogv="" image-src="" image-width="1280" image-height="720" image-focus-x="0.5" image-focus-y="0.5"]
 
 function pl_accordion_slice($atts, $content = null) {
 
@@ -13,7 +13,8 @@ function pl_accordion_slice($atts, $content = null) {
   $default_atts = [
     "title"         => "",
     "description"   => "",
-    "video-src"     => "",
+    "video-src-mp4" => "",
+    "video-src-ogv" => "",
     "image-src"     => "",
     "image-width"   => "1280",
     "image-height"  => "720",
@@ -25,9 +26,9 @@ function pl_accordion_slice($atts, $content = null) {
   $html_data_output = '';
   foreach ($default_atts as $key => $value) {
     if (array_key_exists($key, $clean_atts)) {
-      $html_data_output += ' data-accordion-'.$key.'="'.$clean_atts[$key].'"';
+      $html_data_output .= ' data-accordion-'.$key.'="'.$clean_atts[$key].'"';
     } else {
-      $html_data_output += ' data-accordion-'.$key.'="'.$default_atts[$key].'"';
+      $html_data_output .= ' data-accordion-'.$key.'="'.$default_atts[$key].'"';
     }
   }
 
