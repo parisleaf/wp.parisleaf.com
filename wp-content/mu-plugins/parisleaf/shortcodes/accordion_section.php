@@ -1,10 +1,10 @@
 <?php
 
-// SHORTCODE: Slice
+// SHORTCODE: Accordion Section
 //
-// input: [slice title="" description="" video-src-mp4="" video-src-ogv="" image-src="" image-width="1280" image-height="720" image-focus-x="0.5" image-focus-y="0.5"]
+// input: [section title="" description="" video-src-mp4="" video-src-ogv="" image-src="" image-width="1280" image-height="720" image-focus-x="0.5" image-focus-y="0.5"]
 
-function pl_accordion_slice($atts, $content = null) {
+function pl_accordion_section($atts, $content = null) {
 
   // Clean attributes
   $clean_atts = array_map('sanitize_text_field', $atts);
@@ -37,11 +37,11 @@ function pl_accordion_slice($atts, $content = null) {
 
 ?>
 
-<div class="AccordionSlice" <?= $html_data_output; ?>></div>
+<div class="accordion-section-shortcode" <?= $html_data_output; ?>></div>
 
 <?php
 
   return ob_get_clean();
 }
 
-add_shortcode('slice', 'pl_accordion_slice');
+add_shortcode('section', 'pl_accordion_section');

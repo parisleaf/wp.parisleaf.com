@@ -6,7 +6,7 @@ function pl_is_flag( $flag, $atts ) {
   return false;
 }
 
-require_once('accordion_slice.php');
+require_once('accordion_section.php');
 require_once('accordion.php');
 require_once('author.php');
 require_once('blockquote.php');

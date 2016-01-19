@@ -2,7 +2,7 @@
 
 // SHORTCODE: Accordion
 //
-// input: [accordion][slice][/accordion]
+// input: [accordion][section][/accordion]
 // description: Generates the parent wrapper for video accordions
 
 function pl_accordion($atts, $content=null) {
@@ -11,7 +11,7 @@ function pl_accordion($atts, $content=null) {
     ob_start();
 
     // Begin actual code to be outputted
-    echo '<div class="Accordion">';
+    echo '<div class="accordion-shortcode">';
 
     echo do_shortcode($content);
 

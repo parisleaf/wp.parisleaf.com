@@ -12,7 +12,7 @@ function pl_slider($atts, $content=null) {
     ob_start();
 
     // Begin actual code to be outputted
-    echo '<div class="Slide-this aligncenter">';
+    echo '<div class="slider-shortcode aligncenter">';
     foreach($images as $image) {
         echo '<img src="'.$image.'"/>';
     }
