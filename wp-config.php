@@ -49,8 +49,8 @@ define('DB_COLLATE', '');
 /**
  * Amazaon Web Services config
  */
-define( 'AWS_ACCESS_KEY_ID', getenv('AWS_ACCESS_KEY_ID') );
-define( 'AWS_SECRET_ACCESS_KEY', getenv('AWS_SECRET_ACCESS_KEY') );
+define('AWS_ACCESS_KEY_ID', getenv('AWS_ACCESS_KEY_ID'));
+define('AWS_SECRET_ACCESS_KEY', getenv('AWS_SECRET_ACCESS_KEY'));
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -61,14 +61,14 @@ define( 'AWS_SECRET_ACCESS_KEY', getenv('AWS_SECRET_ACCESS_KEY') );
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'Q+/^#,T5D[va:()a]3]E|h|?0H+[^ykr2> +gt+!-3AnKWU(B|/oQG)mm$JD]F:_');
-define('SECURE_AUTH_KEY',  'bcgcy=ov:--W:D]X;Iz=T=vii^-U8f9.D|bgvJ&VcvBrJO[Zz(_]cXu/,g$v|OX1');
-define('LOGGED_IN_KEY',    ':3IJ|soX^Z]qi(`%|1]zbb+C$~4%*cX0|tA[12 Bl6d`PD+:P4tXZbXJ)_ybg$O(');
-define('NONCE_KEY',        'NOuItP?uS.rb8-BE i$j/7<iQ=3HuI)-at~Gbqq{8g}U}P34|H;:Uafq[BWA9mOD');
-define('AUTH_SALT',        '*{iG-N{c|{C= Ys)E&gW#W7AXT8iJI4EX.o{DpyUagFoKu~~]T)_EsHxFRRB%#EZ');
-define('SECURE_AUTH_SALT', '% D8Pv5*Y@#E>IfN4$7tb.,e-j{;=:8q/Zi7 yozizKj|-.,#ipG30+re)MFk+-{');
-define('LOGGED_IN_SALT',   '^-Mv/ln|rQ]_@|*C%XAqa_m@.a]I;-Vk}QVcQw8+zhLygc!TcP=.H+d6afhYt#]G');
-define('NONCE_SALT',       'P}zNwOuU94XR9-n_]|06P}P{(KTv]}>%]|N](gXffBF:zFp8M+W4DMm>WA>=.a$@');
+define('AUTH_KEY',         getenv('AUTH_KEY'));
+define('SECURE_AUTH_KEY',  getenv('SECURE_AUTH_KEY'));
+define('LOGGED_IN_KEY',    getenv('LOGGED_IN_KEY'));
+define('NONCE_KEY',        getenv('NONCE_KEY'));
+define('AUTH_SALT',        getenv('AUTH_SALT'));
+define('SECURE_AUTH_SALT', getenv('SECURE_AUTH_SALT'));
+define('LOGGED_IN_SALT',   getenv('LOGGED_IN_SALT'));
+define('NONCE_SALT',       getenv('NONCE_SALT'));
 
 /**#@-*/
 
