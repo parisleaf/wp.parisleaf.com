@@ -1,4 +1,4 @@
-WordPress backend installation. Data is exposed via a REST API using WP-API.
+WordPress backend installation that serves JSON data to the parisleaf.com frontend. Data is exposed via a REST API using WP-API.
 
 # Requirements
 
@@ -10,9 +10,11 @@ WordPress backend installation. Data is exposed via a REST API using WP-API.
 
 There are two long-term branches - **master** and **develop** - that should never be removed. New branches should only come from **develop**. Stable changes can then be merged into **master** with a new version tag.
 
-**1 Topic = 1 Commit** Each commit should be attributed to one change.
+**1 Topic = 1 Commit.** Each commit should be attributed to one change.
 
 **Never commit half-done work.** Commits are made to wrap up something completed, no matter how small the change.
+
+### Branches
 
 **Master** contains production-ready code only, and corresponds to the production version of the WordPress backend at [production-wp.parisleaf.com/wp-admin](http://production-wp.parisleaf.com/wp-admin) ([wp.parisleaf.com/wp-admin](http://wp.parisleaf.com/wp-admin) also redirects here)
 
@@ -50,6 +52,22 @@ WP-API is activated automatically, but in order for it to work, switch to pretty
 # Deployment
 
 In staging and production, this app is deployed via dokku-alt and linked to a MariaDB container. Refer to dokku-alt's [documentation](https://github.com/dokku-alt/dokku-alt) for more information.
+
+Pushing to dokku will automatically build the container based on the whatever git commit you pushed.
+
+### Push to staging
+
+1. `git remote add dokku-staging dokku@parisleaf.com:staging-wp`
+2. Commit or stash your changes
+3. `git checkout` the desired branch (master or develop)
+4. `git push dokku-staging`
+
+### Push to production
+
+1. `git remote add dokku-production dokku@parisleaf.com:production-wp`
+2. Commit or stash your changes
+3. `git checkout master`
+4. `git push dokku-production`
 
 # Troubleshooting Tips
 
