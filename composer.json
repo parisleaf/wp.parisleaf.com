@@ -1,6 +1,6 @@
 {
   "name": "parisleaf/wp.parisleaf.com",
-  "description": "An admin-only WordPress installation.",
+  "description": "WordPress backend installation that serves JSON formatted data to the parisleaf.com frontend. Data is exposed via a REST API using WP-API.",
   "repositories": [
     {
       "type":"composer",
