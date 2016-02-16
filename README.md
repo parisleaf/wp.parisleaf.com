@@ -53,21 +53,21 @@ WP-API is activated automatically, but in order for it to work, switch to pretty
 
 ## Deployment
 
-In staging and production, this app is deployed via dokku-alt and linked to a MariaDB container. Refer to dokku-alt's [documentation](https://github.com/dokku-alt/dokku-alt) for more information.
+In staging and production, this app is deployed via dokku-alt and linked to a MariaDB container. Refer to [dokku-alt's documentation](https://github.com/dokku-alt/dokku-alt) for more information.
 
-Pushing to dokku will automatically build the container based on the whatever git commit you pushed.
+Pushing to dokku will automatically build a container based on whatever git commit you just pushed.
 
 #### Push to staging
 
 1. `git remote add dokku-staging dokku@parisleaf.com:staging-wp`
-2. Commit or stash your changes
+2. `git commit` or `git stash` your changes
 3. `git checkout` the desired branch (master or develop)
 4. `git push dokku-staging`
 
 #### Push to production
 
 1. `git remote add dokku-production dokku@parisleaf.com:production-wp`
-2. Commit or stash your changes
+2. `git commit` or `git stash` your changes
 3. `git checkout master`
 4. `git push dokku-production`
 
@@ -75,15 +75,15 @@ Pushing to dokku will automatically build the container based on the whatever gi
 
 #### Why is the wp-content/themes/parisleaf directory empty?
 
-wp.parisleaf.com is only half of the parisleaf.com website - the frontend is controlled entirely by the Node.js server setup on the [parisleaf.com repository](https://github.com/parisleaf/parisleaf.com).
+This repository is only half of the parisleaf.com website - the frontend theme is controlled entirely by the Node.js server setup on the [parisleaf.com repository](https://github.com/parisleaf/parisleaf.com).
 
 #### How do I update the WordPress core?
 
-The WordPress core is treated as a dependency, and the permitted versions are defined in composer.json. Run `composer update` to automatically update the core according to those version definitions. See [composer documentation](https://getcomposer.org/doc/01-basic-usage.md) for more information.
+The WordPress core is treated as a dependency, and the permitted versions are defined in composer.json. Run `composer update` to automatically update the core according to those version definitions. See the [composer documentation](https://getcomposer.org/doc/01-basic-usage.md) and [this article](https://roots.io/using-composer-with-wordpress/) for more information.
 
 #### How do I update the WordPress plugins?
 
-Like the WordPress core, plugins are treated as a dependency, and are managed via composer. Run `composer update` to automatically update all plugins. See [composer documentation](https://getcomposer.org/doc/01-basic-usage.md) for more information.
+Like the WordPress core, WordPress plugins are treated as dependencies, and are managed via composer. Run `composer update` to automatically update all plugins. See [composer documentation](https://getcomposer.org/doc/01-basic-usage.md) for more information.
 
 #### I'm experiencing problems accessing WP-API routes after a new deploy.
 
