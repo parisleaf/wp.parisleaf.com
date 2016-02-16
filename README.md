@@ -60,16 +60,12 @@ Pushing to dokku will automatically build a container based on whatever git comm
 #### Push to staging
 
 1. `git remote add dokku-staging dokku@parisleaf.com:staging-wp`
-2. `git commit` or `git stash` your changes
-3. `git checkout` the desired branch (master or develop)
-4. `git push dokku-staging`
+4. `git push dokku-staging develop:master`
 
 #### Push to production
 
 1. `git remote add dokku-production dokku@parisleaf.com:production-wp`
-2. `git commit` or `git stash` your changes
-3. `git checkout master`
-4. `git push dokku-production`
+4. `git push dokku-production master:master`
 
 ## FAQ
 
