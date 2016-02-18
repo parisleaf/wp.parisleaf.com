@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/parisleaf/wp.parisleaf.com.svg?branch=master)](https://travis-ci.org/parisleaf/wp.parisleaf.com)
+
 WordPress backend installation that serves JSON formatted data to the parisleaf.com frontend. Data is exposed via a REST API using WP-API.
 
 ## Requirements
@@ -53,19 +55,23 @@ WP-API is activated automatically, but in order for it to work, switch to pretty
 
 ## Deployment
 
-In staging and production, this app is deployed via dokku-alt and linked to a MariaDB container. Refer to [dokku-alt's documentation](https://github.com/dokku-alt/dokku-alt) for more information.
+In all our environments, this app was set up to deploy via dokku-alt and has been linked to a MariaDB container that holds the WordPress database specific to each environment. Pushing to dokku-alt will automatically build a new container based on whatever git commit you just pushed.
 
-Pushing to dokku will automatically build a container based on whatever git commit you just pushed.
+Refer to [dokku-alt's documentation](https://github.com/dokku-alt/dokku-alt) for more information.
 
-#### Push to staging
+#### Staging
+
+In staging, the `develop` branch is deployed directly to dokku-alt:
 
 1. `git remote add dokku-staging dokku@parisleaf.com:staging-wp`
-4. `git push dokku-staging develop:master`
+2. `git push dokku-staging develop:master`
 
-#### Push to production
+#### Production
 
-1. `git remote add dokku-production dokku@parisleaf.com:production-wp`
-4. `git push dokku-production master:master`
+In staging, the `master` branch is deployed to [Travis-CI](https://travis-ci.org/), and then Travis deploys to dokku-alt if all tests pass:
+
+1. `git push`
+2. Check [Travis-CI](https://travis-ci.org/)
 
 ## FAQ
 
