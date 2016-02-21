@@ -72,20 +72,20 @@ Includes custom-built plugins for custom post types, shortcodes, and taxonomies.
 
 ## Setup
 
-1. Open up terminal and switch into your local projects directory.
-  ```shell
-  cd ~/Documents/my-projects-directory
-  ```
+Open up terminal and switch into your local projects directory.
+```shell
+cd ~/Documents/my-projects-directory
+```
 
-2. Clone the parisleaf/wp.parisleaf.com repository.
-  ```shell
-  git clone git@github.com:parisleaf/wp.parisleaf.com.git
-  ```
+Clone the parisleaf/wp.parisleaf.com repository.
+```shell
+git clone git@github.com:parisleaf/wp.parisleaf.com.git
+```
 
-3. Install the project dependencies.
-  ```shell
-  composer install
-  ```
+Move into the wp.parisleaf.com project folder and install the project dependencies.
+```shell
+cd wp.parisleaf.com && composer install
+```
 
 ## Configuration
 
