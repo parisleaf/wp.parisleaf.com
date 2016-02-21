@@ -1,28 +1,54 @@
 [![Build Status](https://travis-ci.org/parisleaf/wp.parisleaf.com.svg?branch=master)](https://travis-ci.org/parisleaf/wp.parisleaf.com)
 
-WordPress backend installation that serves JSON formatted data to the parisleaf.com frontend. Data is exposed via a REST API using WP-API.
+WordPress backend installation that serves JSON formatted data to the parisleaf.com frontend. Data is exposed via a REST API using WP API.
 
-## Requirements
+## Git Conventions
 
-* Mac OSX (setup has not been tested on Windows)
-* iTerm 2 with Oh My Zsh installed (makes life easier)
-* Composer
-
-## Conventions
-
-#### Working with Git
 **1 Topic = 1 Commit.** Each commit should be attributed to one change.
 
 **Never commit half-done work.** Commits are made to wrap up something completed, no matter how small the change.
 
 #### Branches
-There are two long-term branches - **master** and **develop** - that should never be removed. New branches should only come from **develop**. Stable changes can then be merged into **master** with a new version tag.
+There are two long-term branches - **master** and **develop** - that should never be removed. New branches should be merged into **develop** when complete. Once tested and confirmed to be stable, the **develop** branch should be merged into **master** with an updated [semantic versioning](http://semver.org/) tag.
+```shell
+npm version [major|minor|patch]
+```
 
-**Master** contains *production-ready* code only, and corresponds to the production version of the WordPress backend at [production-wp.parisleaf.com/wp-admin](http://production-wp.parisleaf.com/wp-admin) ([wp.parisleaf.com/wp-admin](http://wp.parisleaf.com/wp-admin) also redirects here)
+**Master** contains *production-ready* code only. It is the production version of the WordPress backend at [production-wp.parisleaf.com/wp-admin](http://production-wp.parisleaf.com/wp-admin) ([wp.parisleaf.com/wp-admin](http://wp.parisleaf.com/wp-admin) also redirects here)
 
-**Develop** contains *potentially unstable* code and is deployed to [staging-wp.parisleaf.com/wp-admin](http://staging-wp.parisleaf.com/wp-admin).
+**Develop** contains *potentially unstable* code. It is the staging version of the WordPress backend at [staging-wp.parisleaf.com/wp-admin](http://staging-wp.parisleaf.com/wp-admin).
 
 These two versions of the backend are hosted on the same Droplet in Digital Ocean, and deployed via [dokku-alt](https://github.com/dokku-alt/dokku-alt).
+
+## Tooling
+
+#### Composer
+
+Manages PHP dependencies such as WordPress plugins and [phpdotenv](https://github.com/vlucas/phpdotenv) (loads environment variables).
+
+## Notable Plugins
+
+#### [JSON REST API](http://wp-api.org/)
+
+WP API v1 serves data to the frontend of the website.
+
+**Note: You will need to use pretty permalinks (Admin > Settings > Permalinks) for this to work properly.**
+
+#### [Advanced Custom Fields](http://www.advancedcustomfields.com/)
+
+Adds custom field support.
+
+#### [Amazon Web Services](https://wordpress.org/plugins/amazon-web-services/)
+
+Houses the Amazon Web Services (AWS) PHP libraries and manages access keys. Required by other AWS plugins.
+
+#### [WP Offload S3](https://wordpress.org/plugins/amazon-s3-and-cloudfront/)
+
+Copies files to Amazon S3 as they are uploaded to the Media Library. Optionally configure Amazon CloudFront for faster delivery.
+
+#### Parisleaf
+
+Includes custom-built plugins for custom post types, shortcodes, and taxonomies.
 
 ## Setup
 
@@ -49,9 +75,9 @@ Optional env vars:
 
 ## Development
 
-#### WP-API
+This is still a WordPress installation at its core, and can be edited as such. However, some native WordPress features and functions are not available due the fact that the frontend of the site can only retrieve information provided by the WP API plugin. For instance, WordPress live preview, shortcodes, template files, template functions, and third-party plugin functions do not work as expected in a standard WordPress site.
 
-WP-API is activated automatically, but in order for it to work, switch to pretty permalinks (Admin > Settings > Permalinks).
+Consult the [WP API documentation](http://wp-api.org/index-deprecated.html) for more information on the built-in data that can be accessed via the API. Any additional data will need to be hooked into the API using a custom PHP function. See the [WP API Yoast plugin](https://github.com/jmfurlott/wp-api-yoast/blob/master/plugin.php) for an example of how to do this.
 
 ## Deployment
 
@@ -87,9 +113,11 @@ The WordPress core is treated as a dependency, and the permitted versions are de
 
 Like the WordPress core, WordPress plugins are treated as dependencies, and are managed via composer. Run `composer update` to automatically update all plugins. See [composer documentation](https://getcomposer.org/doc/01-basic-usage.md) for more information.
 
-#### I'm experiencing problems accessing WP-API routes after a new deploy.
+#### I'm experiencing problems accessing WP API routes after a new deploy.
 
 Try clearing the permalink cache in WordPress. Simply going to the Settings > Permalinks page should do it.
+
+Another possible cause is having incorrect values set in WordPress > Setting > General. The WordPress Address (URL) and Site Address (URL) should be identical, and specific to each deployment environment (production vs staging).
 
 #### I pushed a new deploy and now parts of the homepage are missing.
 
