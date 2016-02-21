@@ -151,7 +151,7 @@ Like the WordPress core, WordPress plugins are treated as dependencies, and are 
 
 Try clearing the permalink cache in WordPress. Simply going to the Settings > Permalinks page should do it.
 
-Another possible cause is having incorrect values set in WordPress > Setting > General. The WordPress Address (URL) and Site Address (URL) should be identical, and specific to each deployment environment (production vs staging).
+Another possible cause is having incorrect values set in WordPress > Setting > General. The WordPress Address (URL) and Site Address (URL) should be identical, and are specific to each deployment environment (production vs staging).
 
 #### I pushed a new deploy and now parts of the homepage are missing.
 
