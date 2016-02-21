@@ -76,10 +76,12 @@ Includes custom-built plugins for custom post types, shortcodes, and taxonomies.
   ```shell
   cd ~/Documents/my-projects-directory
   ```
+
 2. Clone the parisleaf/wp.parisleaf.com repository.
   ```shell
   git clone git@github.com:parisleaf/wp.parisleaf.com.git
   ```
+
 3. Install the project dependencies.
   ```shell
   composer install
@@ -114,22 +116,22 @@ In staging and production, this app was set up to deploy via dokku-alt. `git pus
 
 Refer to [dokku-alt's documentation](https://github.com/dokku-alt/dokku-alt) for more information.
 
-#### Staging
-
-In staging, the `develop` branch is deployed directly to dokku-alt:
-```shell
-git remote add dokku-staging dokku@parisleaf.com:staging-wp
-git push dokku-staging develop:master
-```
-
 #### Production
 
-In production, the `master` branch is deployed to [Travis-CI](https://travis-ci.org/), and then Travis deploys to dokku-alt if all tests pass:
+In production, the `master` branch is deployed to [Travis-CI](https://travis-ci.org/), and then Travis deploys to dokku-alt if all tests pass.
 ```shell
 git push
 ```
 
 Check [Travis-CI](https://travis-ci.org/) for the live deployment status after pushing.
+
+#### Staging
+
+In staging, the `develop` branch is deployed directly to dokku-alt.
+```shell
+git remote add dokku-staging dokku@parisleaf.com:staging-wp
+git push dokku-staging develop:master
+```
 
 ## FAQ
 
