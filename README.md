@@ -2,6 +2,31 @@
 
 A WordPress installation that serves JSON formatted data to the parisleaf.com frontend. Data is exposed via a REST API using [WP API v1](http://wp-api.org/).
 
+**Table of Contents**
+
+- [Git Conventions](#)
+		- [Branches](#)
+- [Tooling](#)
+		- [Composer](#)
+- [Notable Plugins](#)
+		- [JSON REST API](#)
+		- [Advanced Custom Fields](#)
+		- [Amazon Web Services](#)
+		- [WP Offload S3](#)
+		- [Parisleaf](#)
+- [Setup](#)
+- [Configuration](#)
+- [Development](#)
+- [Deployment](#)
+		- [Staging](#)
+		- [Production](#)
+- [FAQ](#)
+		- [Why is the wp-content/themes/parisleaf directory empty?](#)
+		- [How do I update the WordPress core?](#)
+		- [How do I update the WordPress plugins?](#)
+		- [I'm experiencing problems accessing WP API routes after a new deploy.](#)
+		- [I pushed a new deploy and now parts of the homepage are missing.](#)
+
 ## Git Conventions
 
 **1 Topic = 1 Commit.** Each commit should be attributed to one change.
