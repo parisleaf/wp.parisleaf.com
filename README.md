@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/parisleaf/wp.parisleaf.com.svg?branch=master)](https://travis-ci.org/parisleaf/wp.parisleaf.com)
 
-WordPress backend installation that serves JSON formatted data to the parisleaf.com frontend. Data is exposed via a REST API using WP API.
+A WordPress installation that serves JSON formatted data to the parisleaf.com frontend. Data is exposed via a REST API using [WP API v1](http://wp-api.org/).
 
 ## Git Conventions
 
@@ -10,13 +10,15 @@ WordPress backend installation that serves JSON formatted data to the parisleaf.
 
 #### Branches
 There are two long-term branches - **master** and **develop** - that should never be removed. New branches should be merged into **develop** when complete. Once tested and confirmed to be stable, the **develop** branch should be merged into **master** with an updated [semantic versioning](http://semver.org/) tag.
+
+Use NPM to bump the version and automatically stage a commit with the new version tag.
 ```shell
 npm version [major|minor|patch]
 ```
 
-**Master** contains *production-ready* code only. It is the production version of the WordPress backend at [production-wp.parisleaf.com/wp-admin](http://production-wp.parisleaf.com/wp-admin) ([wp.parisleaf.com/wp-admin](http://wp.parisleaf.com/wp-admin) also redirects here)
+**Master** contains *production-ready* code only, and is accessed at [wp.parisleaf.com/wp-admin](http://wp.parisleaf.com/wp-admin).
 
-**Develop** contains *potentially unstable* code. It is the staging version of the WordPress backend at [staging-wp.parisleaf.com/wp-admin](http://staging-wp.parisleaf.com/wp-admin).
+**Develop** contains *potentially unstable* code, and is accessed at [staging-wp.parisleaf.com/wp-admin](http://staging-wp.parisleaf.com/wp-admin).
 
 These two versions of the backend are hosted on the same Droplet in Digital Ocean, and deployed via [dokku-alt](https://github.com/dokku-alt/dokku-alt).
 
@@ -26,23 +28,30 @@ These two versions of the backend are hosted on the same Droplet in Digital Ocea
 
 Manages PHP dependencies such as WordPress plugins and [phpdotenv](https://github.com/vlucas/phpdotenv) (loads environment variables).
 
+[Click here for docs.](https://getcomposer.org/doc/)
+
 ## Notable Plugins
 
-#### [JSON REST API](http://wp-api.org/)
+#### JSON REST API
 
 WP API v1 serves data to the frontend of the website.
 
 **Note: You will need to use pretty permalinks (Admin > Settings > Permalinks) for this to work properly.**
 
-#### [Advanced Custom Fields](http://www.advancedcustomfields.com/)
+[Click here for docs.](http://wp-api.org/index-deprecated.html)
+
+
+#### Advanced Custom Fields
 
 Adds custom field support.
 
-#### [Amazon Web Services](https://wordpress.org/plugins/amazon-web-services/)
+[Click here for docs.](http://www.advancedcustomfields.com/resources/)
+
+#### Amazon Web Services
 
 Houses the Amazon Web Services (AWS) PHP libraries and manages access keys. Required by other AWS plugins.
 
-#### [WP Offload S3](https://wordpress.org/plugins/amazon-s3-and-cloudfront/)
+#### WP Offload S3
 
 Copies files to Amazon S3 as they are uploaded to the Media Library. Optionally configure Amazon CloudFront for faster delivery.
 
@@ -52,9 +61,18 @@ Includes custom-built plugins for custom post types, shortcodes, and taxonomies.
 
 ## Setup
 
-1. Open up terminal and switch into your local projects directory `cd ~/Documents/my-projects-directory`
-2. Run `git clone git@github.com:parisleaf/wp.parisleaf.com.git`
-3. Run `composer install` to install dependencies. Refer to next section for configuration.
+1. Open up terminal and switch into your local projects directory.
+  ```shell
+  cd ~/Documents/my-projects-directory
+  ```
+2. Clone the parisleaf/wp.parisleaf.com repository.
+  ```shell
+  git clone git@github.com:parisleaf/wp.parisleaf.com.git
+  ```
+3. Install the project dependencies.
+  ```shell
+  composer install
+  ```
 
 ## Configuration
 
@@ -75,35 +93,38 @@ Optional env vars:
 
 ## Development
 
-This is still a WordPress installation at its core, and can be edited as such. However, some native WordPress features and functions are not available due the fact that the frontend of the site can only retrieve information provided by the WP API plugin. For instance, WordPress live preview, shortcodes, template files, template functions, and third-party plugin functions do not work as expected in a standard WordPress site.
+This is still a WordPress installation at its core, and can be edited as such. However, some native WordPress features and functions are not available due the fact that the frontend of the site can only retrieve information provided by the WP API plugin. For instance, WordPress live preview, shortcodes, template files, template functions, and third-party plugin functions may not work as you'd expect in a standard WordPress site.
 
-Consult the [WP API documentation](http://wp-api.org/index-deprecated.html) for more information on the built-in data that can be accessed via the API. Any additional data will need to be hooked into the API using a custom PHP function. See the [WP API Yoast plugin](https://github.com/jmfurlott/wp-api-yoast/blob/master/plugin.php) for an example of how to do this.
+Consult the [WP API documentation](http://wp-api.org/index-deprecated.html) for more information on the built-in post data that can be accessed via the API. Any additional data will need to be hooked into the API using a custom PHP function. See the [WP API Yoast plugin](https://github.com/jmfurlott/wp-api-yoast/blob/master/plugin.php) for an example of how to do this.
 
 ## Deployment
 
-In all our environments, this app was set up to deploy via dokku-alt and has been linked to a MariaDB container that holds the WordPress database specific to each environment. Pushing to dokku-alt will automatically build a new container based on whatever git commit you just pushed.
+In staging and production, this app was set up to deploy via dokku-alt. `git push`ing to dokku-alt will automatically build a new container based on whatever git commit you just pushed. The new container will link to a MariaDB container that holds the WordPress database specific to each environment.
 
 Refer to [dokku-alt's documentation](https://github.com/dokku-alt/dokku-alt) for more information.
 
 #### Staging
 
 In staging, the `develop` branch is deployed directly to dokku-alt:
-
-1. `git remote add dokku-staging dokku@parisleaf.com:staging-wp`
-2. `git push dokku-staging develop:master`
+```shell
+git remote add dokku-staging dokku@parisleaf.com:staging-wp
+git push dokku-staging develop:master
+```
 
 #### Production
 
-In staging, the `master` branch is deployed to [Travis-CI](https://travis-ci.org/), and then Travis deploys to dokku-alt if all tests pass:
+In production, the `master` branch is deployed to [Travis-CI](https://travis-ci.org/), and then Travis deploys to dokku-alt if all tests pass:
+```shell
+git push
+```
 
-1. `git push`
-2. Check [Travis-CI](https://travis-ci.org/)
+Check [Travis-CI](https://travis-ci.org/) for the live deployment status after pushing.
 
 ## FAQ
 
 #### Why is the wp-content/themes/parisleaf directory empty?
 
-This repository is only half of the parisleaf.com website - the frontend theme is controlled entirely by the Node.js server setup on the [parisleaf.com repository](https://github.com/parisleaf/parisleaf.com).
+This repository only serves as a data source for the frontend of the website. The theme is controlled entirely by the Node.js server setup on the [parisleaf.com repository](https://github.com/parisleaf/parisleaf.com).
 
 #### How do I update the WordPress core?
 
