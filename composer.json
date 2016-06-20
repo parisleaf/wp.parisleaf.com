@@ -86,7 +86,8 @@
     "mexitek/phpcolors": "*",
     "PanManAms/WP-JSON-API-ACF":"~1.0",
     "jmfurlott/wp-api-yoast": "~1.0",
-    "firstflight/wp-api-acf-options":"~1.0"
+    "firstflight/wp-api-acf-options":"~1.0",
+    "wpackagist-plugin/quick-pagepost-redirect-plugin": "^5.1.8"
   },
   "extra": {
     "installer-paths": {
