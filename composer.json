@@ -1,6 +1,9 @@
 {
   "name": "parisleaf/wp.parisleaf.com",
   "description": "WordPress backend installation that serves JSON formatted data to the parisleaf.com frontend. Data is exposed via a REST API using WP-API.",
+  "config": {
+    "secure-http": false
+  },
   "repositories": [
     {
       "type":"composer",
@@ -87,7 +90,7 @@
     "PanManAms/WP-JSON-API-ACF":"~1.0",
     "jmfurlott/wp-api-yoast": "~1.0",
     "firstflight/wp-api-acf-options":"~1.0",
-    "wpackagist-plugin/quick-pagepost-redirect-plugin": "^5.1.8"
+    "wpackagist-plugin/quick-pagepost-redirect-plugin": "~5.1.7"
   },
   "extra": {
     "installer-paths": {

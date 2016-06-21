@@ -15,9 +15,9 @@ sudo: false
 before_install:
   - openssl aes-256-cbc -K $encrypted_c88a8410c83d_key -iv $encrypted_c88a8410c83d_iv -in .travis/deploy_key.pem.enc -out .travis/deploy_key.pem -d
 # 2. install
-# 3. before_script
-before_script:
+install:
   - composer install
+# 3. before_script
 # 4. script
 # 5. after_success or after_failure
 after_success:
