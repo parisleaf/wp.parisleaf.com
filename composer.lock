@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "43eae0eec0b63c2dc991b86e5232e7b4",
-    "content-hash": "1166541da00c87aed45d0f44a4b62927",
+    "hash": "12d15fa521345b34df5cd2bd347dbb3a",
+    "content-hash": "aa34ae3be7aff208d41a9e87016ac6d7",
     "packages": [
         {
             "name": "PanManAms/WP-JSON-API-ACF",
@@ -369,36 +369,16 @@
             "homepage": "https://wordpress.org/plugins/json-rest-api/"
         },
         {
-            "name": "wpackagist-plugin/quick-pagepost-redirect-plugin",
-            "version": "5.1.8",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/quick-pagepost-redirect-plugin/",
-                "reference": "tags/5.1.8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/quick-pagepost-redirect-plugin.5.1.8.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/quick-pagepost-redirect-plugin/"
-        },
-        {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "3.3.1",
+            "version": "3.3.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/3.3.1"
+                "reference": "tags/3.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.3.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.3.2.zip",
                 "reference": null,
                 "shasum": null
             },
